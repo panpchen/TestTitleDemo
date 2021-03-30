@@ -25,5 +25,8 @@ export default class AnswerItem extends cc.Component {
   itemBg: cc.Sprite = null;
   private _itemId: number = 0;
 
-  init() {}
+  init(data) {
+    this.toggle.isChecked = false;
+    this.label.string = data["content"];
+  }
 }

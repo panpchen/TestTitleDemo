@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "answerItem",
+    "_name": "answerNoItem",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -523,9 +523,6 @@
       },
       {
         "__uuid__": "d89a01c4-2285-4c39-b025-033aebc52df3"
-      },
-      {
-        "__uuid__": "332791d3-618f-45b6-8f58-e0a8c0522afb"
       }
     ],
     "checkMarkIcon": {

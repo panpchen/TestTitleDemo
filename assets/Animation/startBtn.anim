@@ -1,0 +1,33 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "startBtn",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.19607843137254902,
+  "sample": 51,
+  "speed": 0.5,
+  "wrapMode": 22,
+  "curveData": {
+    "props": {
+      "scale": [
+        {
+          "frame": 0,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1.5,
+            "y": 1.5
+          }
+        },
+        {
+          "frame": 0.19607843137254902,
+          "value": {
+            "__type__": "cc.Vec2",
+            "x": 1.6,
+            "y": 1.6
+          }
+        }
+      ]
+    }
+  },
+  "events": []
+}
