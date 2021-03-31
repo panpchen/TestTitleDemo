@@ -23,10 +23,26 @@ export default class AnswerItem extends cc.Component {
   icons: cc.SpriteFrame[] = [];
   @property(cc.Sprite)
   itemBg: cc.Sprite = null;
-  private _itemId: number = 0;
+  @property(cc.Sprite)
+  normalBg: cc.Sprite = null;
 
   init(data) {
     this.toggle.isChecked = false;
     this.label.string = data["content"];
+    if (this.itemBg) {
+    } else {
+    }
+  }
+
+  onToggleEvent(evt: cc.Toggle, parm) {
+    if (evt.isChecked) {
+      this.normalBg.spriteFrame = this.bgList[2];
+    } else {
+      this.normalBg.spriteFrame = this.bgList[3];
+    }
+  }
+
+  unuse() {
+    this.normalBg.spriteFrame = this.bgList[3];
   }
 }

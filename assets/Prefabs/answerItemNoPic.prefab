@@ -201,7 +201,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 6
@@ -302,7 +302,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "info",
+    "_name": "label",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -327,20 +327,20 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 31.5
+      "width": 655.9,
+      "height": 40.32
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0.5
+      "y": 1
     },
     "_trs": {
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -362.931,
-        13.603,
+        -362.9,
+        40.715,
         0,
         0,
         0,
@@ -382,7 +382,7 @@
     "_string": "",
     "_N$string": "",
     "_fontSize": 25,
-    "_lineHeight": 25,
+    "_lineHeight": 32,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": false,
@@ -390,10 +390,10 @@
     "_batchAsBitmap": false,
     "_styleFlags": 0,
     "_underlineHeight": 0,
-    "_N$horizontalAlign": 1,
+    "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 3,
     "_N$cacheMode": 1,
     "_id": ""
   },
@@ -469,20 +469,24 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": null,
-    "_N$pressedSprite": null,
-    "pressedSprite": null,
+    "_N$normalSprite": {
+      "__uuid__": "332791d3-618f-45b6-8f58-e0a8c0522afb"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "03da064a-adc0-4f5f-b050-8655b2064d2a"
+    },
+    "pressedSprite": {
+      "__uuid__": "03da064a-adc0-4f5f-b050-8655b2064d2a"
+    },
     "_N$hoverSprite": null,
     "hoverSprite": null,
     "_N$disabledSprite": null,
     "_N$target": {
       "__id__": 1
     },
-    "_N$isChecked": true,
+    "_N$isChecked": false,
     "toggleGroup": null,
-    "checkMark": {
-      "__id__": 6
-    },
+    "checkMark": null,
     "checkEvents": [
       {
         "__id__": 12
@@ -519,10 +523,13 @@
         "__uuid__": "2c98d920-0c2e-477f-a7b7-cdaedb382c52"
       },
       {
+        "__uuid__": "d89a01c4-2285-4c39-b025-033aebc52df3"
+      },
+      {
         "__uuid__": "03da064a-adc0-4f5f-b050-8655b2064d2a"
       },
       {
-        "__uuid__": "d89a01c4-2285-4c39-b025-033aebc52df3"
+        "__uuid__": "332791d3-618f-45b6-8f58-e0a8c0522afb"
       }
     ],
     "checkMarkIcon": {
@@ -537,6 +544,9 @@
       }
     ],
     "itemBg": null,
+    "normalBg": {
+      "__id__": 3
+    },
     "_id": ""
   },
   {

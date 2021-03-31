@@ -343,7 +343,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        -27,
+        -35.499,
         0,
         0,
         0,
@@ -412,7 +412,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "name",
+    "_name": "label",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -437,20 +437,20 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 31.5
+      "width": 455,
+      "height": 40.32
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0.5
+      "y": 1
     },
     "_trs": {
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -225.128,
-        83.915,
+        -225,
+        111.895,
         0,
         0,
         0,
@@ -492,18 +492,18 @@
     "_string": "",
     "_N$string": "",
     "_fontSize": 25,
-    "_lineHeight": 25,
-    "_enableWrapText": true,
+    "_lineHeight": 32,
+    "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_batchAsBitmap": false,
     "_styleFlags": 0,
     "_underlineHeight": 0,
-    "_N$horizontalAlign": 1,
+    "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0,
+    "_N$overflow": 3,
     "_N$cacheMode": 1,
     "_id": ""
   },
@@ -579,20 +579,30 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": null,
-    "_N$pressedSprite": null,
-    "pressedSprite": null,
-    "_N$hoverSprite": null,
-    "hoverSprite": null,
-    "_N$disabledSprite": null,
+    "_N$normalSprite": {
+      "__uuid__": "7563cf5d-fc63-4e1b-b583-6a037e0a833b"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "7b8ff29d-6a51-47ca-bff0-9dcb7f299184"
+    },
+    "pressedSprite": {
+      "__uuid__": "7b8ff29d-6a51-47ca-bff0-9dcb7f299184"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "7b8ff29d-6a51-47ca-bff0-9dcb7f299184"
+    },
+    "hoverSprite": {
+      "__uuid__": "7b8ff29d-6a51-47ca-bff0-9dcb7f299184"
+    },
+    "_N$disabledSprite": {
+      "__uuid__": "7b8ff29d-6a51-47ca-bff0-9dcb7f299184"
+    },
     "_N$target": {
       "__id__": 1
     },
     "_N$isChecked": false,
     "toggleGroup": null,
-    "checkMark": {
-      "__id__": 6
-    },
+    "checkMark": null,
     "checkEvents": [
       {
         "__id__": 15
@@ -629,10 +639,10 @@
         "__uuid__": "09ab0b14-58a8-466b-a9a5-0a73364aece9"
       },
       {
-        "__uuid__": "7b8ff29d-6a51-47ca-bff0-9dcb7f299184"
+        "__uuid__": "ec91c09a-f702-4e5c-bb8c-35160f7e44c0"
       },
       {
-        "__uuid__": "ec91c09a-f702-4e5c-bb8c-35160f7e44c0"
+        "__uuid__": "7b8ff29d-6a51-47ca-bff0-9dcb7f299184"
       },
       {
         "__uuid__": "7563cf5d-fc63-4e1b-b583-6a037e0a833b"
@@ -651,6 +661,9 @@
     ],
     "itemBg": {
       "__id__": 9
+    },
+    "normalBg": {
+      "__id__": 3
     },
     "_id": ""
   },
