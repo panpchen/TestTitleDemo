@@ -1,4 +1,6 @@
 import AnswerItem from "./AnswerItem";
+import EndUI from "./EndUI";
+import { Utils } from "./Utils";
 
 const { ccclass, property } = cc._decorator;
 
@@ -21,7 +23,13 @@ export default class Game extends cc.Component {
   @property(cc.Node)
   initUI: cc.Node = null;
   @property(cc.Node)
+  endUI: cc.Node = null;
+  @property(cc.Node)
   submitBtn: cc.Node = null;
+  @property(cc.Label)
+  gameTimeLabel: cc.Label = null;
+  @property(cc.Label)
+  gameScoreLabel: cc.Label = null;
   private _tip: cc.Node = null;
   private _isInitConfig: boolean = false; // 是否加载完题目配置
   private _subjectConfig = null; // 试卷配置
@@ -29,6 +37,9 @@ export default class Game extends cc.Component {
   private _curTitleId: number = 0; // 当前题目Id
   private _itemPool: cc.NodePool = null;
   private _itemNoPicPool: cc.NodePool = null;
+  private _selectOptions: AnswerItem[] = [];
+  public _allItemList: AnswerItem[] = [];
+  private _currentTime: number = 0;
 
   public static instance: Game = null;
   onLoad() {
@@ -61,6 +72,15 @@ export default class Game extends cc.Component {
       .catch(() => {
         cc.error("评测配置加载失败");
       });
+  }
+
+  startTime() {
+    this.schedule(this.gameTimeCallback, 1, cc.macro.REPEAT_FOREVER, 0.01);
+  }
+
+  gameTimeCallback() {
+    this._currentTime++;
+    this.gameTimeLabel.string = Utils.countDownFormat(this._currentTime);
   }
 
   loadSubjectConfig() {
@@ -129,7 +149,8 @@ export default class Game extends cc.Component {
       } else {
         node = this._createOptionItem();
       }
-      node.getComponent(AnswerItem).init(optionData);
+      this._allItemList.push(node.getComponent(AnswerItem));
+      node.getComponent(AnswerItem).init(i, optionData);
     }
   }
 
@@ -163,6 +184,8 @@ export default class Game extends cc.Component {
     for (let i = this.itemNoPicParent.childrenCount - 1; i >= 0; i--) {
       this._itemNoPicPool.put(this.itemNoPicParent.children[i]);
     }
+
+    this._allItemList = [];
   }
 
   showTips(content) {
@@ -184,6 +207,7 @@ export default class Game extends cc.Component {
       "finished",
       () => {
         this.initUI.active = false;
+        this.startTime();
       },
       this
     );
@@ -195,23 +219,80 @@ export default class Game extends cc.Component {
     if (!this._isInitConfig) {
       this.showTips("题目配置在加载中,请等候...");
     } else {
+      this.checkAnswer();
+      this._selectOptions = [];
+      this.submitBtn.active = false;
+
       if (this.isGameOver()) {
-        cc.error("over: ", this._curTitleId);
-        this.submitBtn.active = false;
+        this.unschedule(this.gameTimeCallback);
+        this.scheduleOnce(() => {
+          this.showEndUI();
+        }, 1.5);
         return;
       }
 
-      this.checkAnswer();
+      this._curTitleId++;
 
-      this.scheduleOnce(() => {
-        this._curTitleId++;
-        cc.error(this._curTitleId);
-        this.updateContent();
-      }, 1);
+      this.unschedule(this.callback);
+      this.scheduleOnce(this.callback, 1);
     }
   }
 
-  checkAnswer() {}
+  callback() {
+    this.updateContent();
+    this.submitBtn.active = true;
+  }
+
+  checkAnswer() {
+    // 按题目生成顺序排序
+    this._selectOptions.sort((a, b) => {
+      return a.optionId - b.optionId;
+    });
+
+    const allAnswerList = this._allItemList.filter((v) => {
+      return v.result == 1;
+    });
+
+    for (let i = 0; i < this._allItemList.length; i++) {
+      for (let j = 0; j < allAnswerList.length; j++) {
+        if (this._allItemList[i].optionId == allAnswerList[j].optionId) {
+          this._allItemList[i].setMarkIconState(true);
+          break;
+        } else {
+          this._allItemList[i].setMarkIconState(false);
+        }
+      }
+    }
+
+    for (let i = 0; i < this._allItemList.length; i++) {
+      for (let j = 0; j < this._selectOptions.length; j++) {
+        if (this._allItemList[i].optionId == this._selectOptions[j].optionId) {
+          break;
+        }
+      }
+    }
+  }
 
   storePlayerData() {}
+
+  addSelectToList(answerItem: AnswerItem) {
+    this._selectOptions.push(answerItem);
+  }
+  removeSelectToList(answerItem: AnswerItem) {
+    for (let i = this._selectOptions.length - 1; i >= 0; i--) {
+      if (this._selectOptions[i].optionId == answerItem.optionId) {
+        this._selectOptions.splice(i, 1);
+        break;
+      }
+    }
+  }
+
+  showEndUI() {
+    this.endUI.active = true;
+    this.endUI.getComponent(EndUI).init(this._currentTime);
+    const aniList = this.endUI.getComponentsInChildren(cc.Animation);
+    aniList.forEach((ani) => {
+      ani.play();
+    });
+  }
 }

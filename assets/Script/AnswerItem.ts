@@ -25,8 +25,19 @@ export default class AnswerItem extends cc.Component {
   itemBg: cc.Sprite = null;
   @property(cc.Sprite)
   normalBg: cc.Sprite = null;
+  private _optionId: number = 0;
+  public get optionId() {
+    return this._optionId;
+  }
 
-  init(data) {
+  private _result: number = -1;
+  public get result() {
+    return this._result;
+  }
+
+  init(id, data) {
+    this._optionId = id;
+    this._result = data["result"];
     this.toggle.isChecked = false;
     this.label.string = `${data["optioni"]}.${data["content"]}`;
 
@@ -44,19 +55,33 @@ export default class AnswerItem extends cc.Component {
           this.itemBg.spriteFrame = asset;
         }
       );
-    } else {
     }
   }
 
   onToggleEvent(evt: cc.Toggle, parm) {
     if (evt.isChecked) {
       this.normalBg.spriteFrame = this.bgList[2];
+      Game.instance.addSelectToList(this);
     } else {
       this.normalBg.spriteFrame = this.bgList[3];
+      Game.instance.removeSelectToList(this);
     }
   }
 
   unuse() {
     this.normalBg.spriteFrame = this.bgList[3];
+    this.checkMarkIcon.spriteFrame = null;
+    this.checkMarkIcon.node.active = false;
+  }
+
+  setMarkIconState(isCorrect: boolean) {
+    this.checkMarkIcon.node.active = true;
+    if (isCorrect) {
+      this.checkMarkIcon.spriteFrame = this.icons[0];
+      this.normalBg.spriteFrame = this.bgList[0];
+    } else {
+      this.checkMarkIcon.spriteFrame = this.icons[1];
+      this.normalBg.spriteFrame = this.bgList[1];
+    }
   }
 }
