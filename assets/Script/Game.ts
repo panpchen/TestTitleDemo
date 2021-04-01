@@ -33,13 +33,16 @@ export default class Game extends cc.Component {
   private _tip: cc.Node = null;
   private _isInitConfig: boolean = false; // 是否加载完题目配置
   private _subjectConfig = null; // 试卷配置
-  private _titleList = null; // 所有试卷题目配置
+  private _titleList = []; // 所有试卷题目配置
+
+  private _titleCfg = null; // 当前题目配置
   private _curTitleId: number = 0; // 当前题目Id
   private _itemPool: cc.NodePool = null;
   private _itemNoPicPool: cc.NodePool = null;
   private _selectOptions: AnswerItem[] = [];
   public _allItemList: AnswerItem[] = [];
   private _currentTime: number = 0;
+  private _currentScore: number = 0;
 
   public static instance: Game = null;
   onLoad() {
@@ -126,17 +129,17 @@ export default class Game extends cc.Component {
       this._titleList.length
     }`;
 
-    const titleCfg = this._titleList[this._curTitleId];
+    this._titleCfg = this._titleList[this._curTitleId];
 
     // 显示标题
     let titleType = "";
-    if (titleCfg.titleType == 1) {
+    if (this._titleCfg.titleType == 1) {
       titleType = "(单选题)";
-    } else if (titleCfg.titleType == 2) {
+    } else if (this._titleCfg.titleType == 2) {
       titleType = "(多选题)";
     }
     this.titleLabel.string = `第${this._curTitleId + 1}题: ${
-      titleCfg.title
+      this._titleCfg.title
     }   ${titleType}`;
 
     // 显示选项列表
@@ -264,12 +267,21 @@ export default class Game extends cc.Component {
       }
     }
 
-    for (let i = 0; i < this._allItemList.length; i++) {
+    let correctNum = 0;
+    for (let i = 0; i < allAnswerList.length; i++) {
       for (let j = 0; j < this._selectOptions.length; j++) {
-        if (this._allItemList[i].optionId == this._selectOptions[j].optionId) {
+        if (allAnswerList[i].optionId == this._selectOptions[j].optionId) {
+          correctNum++;
           break;
         }
       }
+    }
+
+    // 算得分
+    if (correctNum == allAnswerList.length) {
+      this._currentScore += this._titleCfg["score"];
+    } else if (correctNum > 0 && correctNum < allAnswerList.length) {
+      this._currentScore += this._titleCfg["partScore"];
     }
   }
 

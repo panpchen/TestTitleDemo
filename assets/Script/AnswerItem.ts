@@ -29,13 +29,21 @@ export default class AnswerItem extends cc.Component {
   public get optionId() {
     return this._optionId;
   }
+  public get score() {
+    return this._data["score"];
+  }
+  public get partScore() {
+    return this._data["partScore"];
+  }
 
   private _result: number = -1;
   public get result() {
     return this._result;
   }
+  private _data = null;
 
   init(id, data) {
+    this._data = data;
     this._optionId = id;
     this._result = data["result"];
     this.toggle.isChecked = false;
