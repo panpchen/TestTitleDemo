@@ -20,10 +20,12 @@ export default class Game extends cc.Component {
   tipPrefab: cc.Prefab = null;
   @property(cc.Node)
   initUI: cc.Node = null;
+  @property(cc.Node)
+  submitBtn: cc.Node = null;
   private _tip: cc.Node = null;
   private _isInitConfig: boolean = false; // 是否加载完题目配置
   private _subjectConfig = null; // 试卷配置
-  private _;
+  private _titleList = null; // 所有试卷题目配置
   private _curTitleId: number = 0; // 当前题目Id
   private _itemPool: cc.NodePool = null;
   private _itemNoPicPool: cc.NodePool = null;
@@ -40,13 +42,16 @@ export default class Game extends cc.Component {
     }
 
     this.initUI.active = true;
+    this.submitBtn.active = true;
 
+    // 预加载
     cc.resources.preloadDir("configs", cc.JsonAsset);
-    cc.resources.preloadDir("itemBgs", cc.SpriteFrame);
+    cc.resources.preloadDir("optionPics", cc.SpriteFrame);
 
     this.loadAllConfig()
       .then(() => {
         cc.log("评测配置全部加载完");
+        this._titleList = this._subjectConfig["subjectList"];
         this._isInitConfig = true;
         this.initUI
           .getChildByName("title")
@@ -68,7 +73,7 @@ export default class Game extends cc.Component {
             reject("anxun_subject加载出错");
             return;
           }
-          this._subjectConfig = jsonAsset.json;
+          this._subjectConfig = jsonAsset.json[0];
           cc.log(this._subjectConfig);
           resolve(null);
         }
@@ -86,37 +91,46 @@ export default class Game extends cc.Component {
     }
   }
 
+  isGameOver() {
+    return this._curTitleId >= this._titleList.length - 1;
+  }
+
   // 更新标题和选项
   updateContent() {
-    const titleList = this._subjectConfig["subjectList"];
-    cc.log(`总共${titleList.length}题`);
-
-    if (this._curTitleId > titleList.length - 1) {
-      this._curTitleId = titleList.length - 1;
-    }
+    cc.log(`总共${this._titleList.length}题`);
 
     // 隐藏选项
     this._hideAllItem();
 
-    this.titleNumLabel.string = `${this._curTitleId + 1}/${titleList.length}`;
-
-    // 标题
-    this.titleLabel.string = `第${this._curTitleId + 1}题: ${
-      titleList[this._curTitleId].title
+    this.titleNumLabel.string = `${this._curTitleId + 1}/${
+      this._titleList.length
     }`;
 
-    // 创建选项列表
-    // const optionList = titleList[this._curTitleId]["options"];
-    // for (let i = 0, len = optionList.length; i < len; i++) {
-    //   const optionData = optionList[i];
-    //   let node = null;
-    //   if (optionData["picUrl"].length != 0) {
-    //     node = this._createOptionItem();
-    //   } else {
-    //     node = this._createNoPicItem();
-    //   }
-    //   node.getComponent(AnswerItem).init(optionData);
-    // }
+    const titleCfg = this._titleList[this._curTitleId];
+
+    // 显示标题
+    let titleType = "";
+    if (titleCfg.titleType == 1) {
+      titleType = "(单选题)";
+    } else if (titleCfg.titleType == 2) {
+      titleType = "(多选题)";
+    }
+    this.titleLabel.string = `第${this._curTitleId + 1}题: ${
+      titleCfg.title
+    }   ${titleType}`;
+
+    // 显示选项列表
+    const optionList = this._titleList[this._curTitleId]["options"];
+    for (let i = 0, len = optionList.length; i < len; i++) {
+      const optionData = optionList[i];
+      let node = null;
+      if (optionData["optionPic"].length == 0) {
+        node = this._createNoPicItem();
+      } else {
+        node = this._createOptionItem();
+      }
+      node.getComponent(AnswerItem).init(optionData);
+    }
   }
 
   _createOptionItem() {
@@ -181,8 +195,23 @@ export default class Game extends cc.Component {
     if (!this._isInitConfig) {
       this.showTips("题目配置在加载中,请等候...");
     } else {
-      this._curTitleId++;
-      this.updateContent();
+      if (this.isGameOver()) {
+        cc.error("over: ", this._curTitleId);
+        this.submitBtn.active = false;
+        return;
+      }
+
+      this.checkAnswer();
+
+      this.scheduleOnce(() => {
+        this._curTitleId++;
+        cc.error(this._curTitleId);
+        this.updateContent();
+      }, 1);
     }
   }
+
+  checkAnswer() {}
+
+  storePlayerData() {}
 }

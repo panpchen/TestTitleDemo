@@ -28,8 +28,22 @@ export default class AnswerItem extends cc.Component {
 
   init(data) {
     this.toggle.isChecked = false;
-    this.label.string = data["content"];
+    this.label.string = `${data["optioni"]}.${data["content"]}`;
+
     if (this.itemBg) {
+      const index = data["optionPic"].lastIndexOf(".");
+      const newSrc = data["optionPic"].substring(0, index);
+      cc.resources.load(
+        `optionPics/${newSrc}`,
+        cc.SpriteFrame,
+        (err, asset: cc.SpriteFrame) => {
+          if (err) {
+            cc.error(err);
+            return;
+          }
+          this.itemBg.spriteFrame = asset;
+        }
+      );
     } else {
     }
   }

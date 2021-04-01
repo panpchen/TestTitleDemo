@@ -1655,6 +1655,9 @@
     "initUI": {
       "__id__": 34
     },
+    "submitBtn": {
+      "__id__": 24
+    },
     "_id": "bfzWiSYupEsbySDql7hrWq"
   },
   {
