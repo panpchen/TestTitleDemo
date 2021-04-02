@@ -35,6 +35,18 @@ export default class AnswerItem extends cc.Component {
   public get partScore() {
     return this._data["partScore"];
   }
+  private _optioni: string = "";
+  public get optioni() {
+    return this._optioni;
+  }
+
+  public get content() {
+    return this._data["content"];
+  }
+
+  public get titleId() {
+    return this._data["id"];
+  }
 
   private _result: number = -1;
   public get result() {
@@ -47,7 +59,8 @@ export default class AnswerItem extends cc.Component {
     this._optionId = id;
     this._result = data["result"];
     this.toggle.isChecked = false;
-    this.label.string = `${data["optioni"]}.${data["content"]}`;
+    this._optioni = data["optioni"];
+    this.label.string = `${this._optioni}.${data["content"]}`;
 
     if (this.itemBg) {
       const index = data["optionPic"].lastIndexOf(".");

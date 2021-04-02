@@ -1,5 +1,6 @@
 import AnswerItem from "./AnswerItem";
 import EndUI from "./EndUI";
+import { PlayerData } from "./PlayerData";
 import { Utils } from "./Utils";
 
 const { ccclass, property } = cc._decorator;
@@ -40,10 +41,10 @@ export default class Game extends cc.Component {
   private _itemPool: cc.NodePool = null;
   private _itemNoPicPool: cc.NodePool = null;
   private _selectOptions: AnswerItem[] = [];
+  // private _constSelectOptions = [];
   public _allItemList: AnswerItem[] = [];
   private _currentTime: number = 0;
   private _currentScore: number = 0;
-
   public static instance: Game = null;
   onLoad() {
     Game.instance = this;
@@ -97,6 +98,8 @@ export default class Game extends cc.Component {
             return;
           }
           this._subjectConfig = jsonAsset.json[0];
+          PlayerData.instance().paperId = this._subjectConfig["id"];
+          PlayerData.instance().paperName = this._subjectConfig["name"];
           cc.log(this._subjectConfig);
           resolve(null);
         }
@@ -223,8 +226,9 @@ export default class Game extends cc.Component {
       this.showTips("题目配置在加载中,请等候...");
     } else {
       this.checkAnswer();
-      this._selectOptions = [];
+      this.storePlayerData();
       this.submitBtn.active = false;
+      this._selectOptions = [];
 
       if (this.isGameOver()) {
         this.unschedule(this.gameTimeCallback);
@@ -279,20 +283,57 @@ export default class Game extends cc.Component {
     }
 
     // 算得分
+    let awardScore = 0;
     if (
       this._selectOptions.length == allAnswerList.length &&
       correctNum == allAnswerList.length
     ) {
-      this._currentScore += this._titleCfg["score"];
-      cc.error("全对: ", this._currentScore);
+      awardScore = this._titleCfg["score"];
+      cc.error("全对: ", awardScore);
     } else if (correctNum > 0) {
-      this._currentScore += this._titleCfg["partScore"];
-      cc.error("半对: ", this._currentScore);
+      awardScore = this._titleCfg["partScore"];
+      cc.error("半对: ", awardScore);
     }
+    this._currentScore += awardScore;
+
+    const newCfg = {};
+    newCfg["id"] = this._titleCfg["paperId"];
+    newCfg["title"] = this._titleCfg["title"];
+    newCfg["type"] = this._titleCfg["titleType"];
+    newCfg["score"] = awardScore;
+    newCfg["options"] = [];
+
+    // if (!this._constSelectOptions[this._curTitleId]) {
+    //   this._constSelectOptions[this._curTitleId] = [];
+    // }
+    // this._constSelectOptions[this._curTitleId] = this._selectOptions;
+
+    // const options = [];
+    // for (let i = 0; i < this._constSelectOptions.length; i++) {
+    //   options[i] = this._constSelectOptions[i].map((item) => item["optioni"]);
+    // }
+
+    for (let i = 0; i < this._selectOptions.length; i++) {
+      newCfg["options"][i] = {};
+      newCfg["options"][i]["id"] = this._selectOptions[i].titleId;
+      newCfg["options"][i]["title"] = this._selectOptions[i].content;
+      newCfg["options"][i]["optioni"] = this._selectOptions[i].optioni;
+    }
+
+    PlayerData.instance().subjects.push(newCfg);
+
     this.gameScoreLabel.string = `${this._currentScore}分`;
+    PlayerData.instance().score = this._currentScore;
   }
 
-  storePlayerData() {}
+  storePlayerData() {
+    const jsonContent = PlayerData.instance().storeData();
+
+    const a = document.createElement("a");
+    a.setAttribute("href", "javaScript:void(0);" + jsonContent);
+    document.body.appendChild(a);
+    a.click();
+  }
 
   addSelectToList(answerItem: AnswerItem) {
     this._selectOptions.push(answerItem);
