@@ -247,7 +247,6 @@ export default class Game extends cc.Component {
   }
 
   checkAnswer() {
-    // 按题目生成顺序排序
     this._selectOptions.sort((a, b) => {
       return a.optionId - b.optionId;
     });
@@ -256,6 +255,7 @@ export default class Game extends cc.Component {
       return v.result == 1;
     });
 
+    // 显示正确答案
     for (let i = 0; i < this._allItemList.length; i++) {
       for (let j = 0; j < allAnswerList.length; j++) {
         if (this._allItemList[i].optionId == allAnswerList[j].optionId) {
@@ -267,6 +267,7 @@ export default class Game extends cc.Component {
       }
     }
 
+    // 答对数
     let correctNum = 0;
     for (let i = 0; i < allAnswerList.length; i++) {
       for (let j = 0; j < this._selectOptions.length; j++) {
@@ -278,11 +279,17 @@ export default class Game extends cc.Component {
     }
 
     // 算得分
-    if (correctNum == allAnswerList.length) {
+    if (
+      this._selectOptions.length == allAnswerList.length &&
+      correctNum == allAnswerList.length
+    ) {
       this._currentScore += this._titleCfg["score"];
-    } else if (correctNum > 0 && correctNum < allAnswerList.length) {
+      cc.error("全对: ", this._currentScore);
+    } else if (correctNum > 0) {
       this._currentScore += this._titleCfg["partScore"];
+      cc.error("半对: ", this._currentScore);
     }
+    this.gameScoreLabel.string = `${this._currentScore}分`;
   }
 
   storePlayerData() {}
@@ -301,10 +308,6 @@ export default class Game extends cc.Component {
 
   showEndUI() {
     this.endUI.active = true;
-    this.endUI.getComponent(EndUI).init(this._currentTime);
-    const aniList = this.endUI.getComponentsInChildren(cc.Animation);
-    aniList.forEach((ani) => {
-      ani.play();
-    });
+    this.endUI.getComponent(EndUI).init(this._currentTime, this._currentScore);
   }
 }
