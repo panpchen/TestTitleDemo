@@ -327,12 +327,13 @@ export default class Game extends cc.Component {
   }
 
   storePlayerData() {
-    const jsonContent = PlayerData.instance().storeData();
+    const data = PlayerData.instance().storeData();
 
     const a = document.createElement("a");
-    a.setAttribute("href", "javaScript:void(0);" + jsonContent);
+    a.onclick = () => {
+      window.injectedObject.startFunction(data);
+    };
     document.body.appendChild(a);
-    a.click();
   }
 
   addSelectToList(answerItem: AnswerItem) {

@@ -111,8 +111,8 @@ export class Utils {
     // 该数组有两个元素，第一个为空字符串，第二个为 url 参数字符串
     let arr = url.split("?");
     if (arr.length < 2) {
-      cc.log("url缺少参数");
-      return;
+      cc.error("url缺少参数");
+      throw new Error("url缺少参数");
     }
     // 将参数字符串以 "&" 符号为分隔符进行分割
     let params = arr[1].split("&");

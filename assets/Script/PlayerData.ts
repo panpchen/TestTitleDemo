@@ -40,7 +40,8 @@ export class PlayerData {
 
     // cc.error(this._storeData);
     // cc.error(JSON.stringify(this._storeData));
-    let str = encodeURIComponent(JSON.stringify(this._storeData));
+    // let str = encodeURIComponent(JSON.stringify(this._storeData));
+    let str = JSON.stringify(this._storeData);
     cc.error(str);
     cc.error(decodeURIComponent(str));
     return str;
