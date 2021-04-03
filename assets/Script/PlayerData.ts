@@ -18,8 +18,8 @@ export class PlayerData {
 
   constructor() {
     this._storeData = Utils.getParmFromURL(
-      "https://null.jsbin.com/runner?processId=19211414" // 测试用
-      // window.location.href
+      // "https://null.jsbin.com/runner?processId=19211414" // 测试用
+      window.location.href
     );
   }
 
