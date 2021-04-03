@@ -9,7 +9,8 @@
   "wrapMode": 2,
   "curveData": {
     "paths": {
-      "背景光": {
+      "content/背景光": {
+        "comps": {},
         "props": {
           "angle": [
             {
@@ -23,7 +24,8 @@
           ]
         }
       },
-      "小元素": {
+      "content/小元素": {
+        "comps": {},
         "props": {
           "scale": [
             {

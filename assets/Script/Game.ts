@@ -231,6 +231,7 @@ export default class Game extends cc.Component {
       this._selectOptions = [];
 
       if (this.isGameOver()) {
+        this.unscheduleAllCallbacks();
         this.unschedule(this.gameTimeCallback);
         this.scheduleOnce(() => {
           this.showEndUI();
@@ -324,6 +325,7 @@ export default class Game extends cc.Component {
 
     this.gameScoreLabel.string = `${this._currentScore}分`;
     PlayerData.instance().score = this._currentScore;
+    PlayerData.instance().totalTime = this._currentTime;
   }
 
   storePlayerData() {
@@ -331,6 +333,7 @@ export default class Game extends cc.Component {
 
     const a = document.createElement("a");
     a.onclick = () => {
+      // 发给客户端信息
       window.injectedObject.startFunction(data);
     };
     document.body.appendChild(a);

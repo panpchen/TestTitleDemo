@@ -23,6 +23,10 @@ export default class EndUI extends cc.Component {
   offBtn: cc.Node = null;
   @property(cc.Animation)
   scorePanelAni: cc.Animation = null;
+  @property(cc.Node)
+  endInfoUI: cc.Node = null;
+  @property(cc.Node)
+  aniNode: cc.Node = null;
 
   init(gameTime: number, score: number) {
     cc.error("时间: ", gameTime, "分数: ", score);
@@ -31,6 +35,8 @@ export default class EndUI extends cc.Component {
     this.scoreLabel.string = `${score}分`;
     this.bigScoreLabel.string = score.toString();
     this.showOffBtn(false);
+    this.aniNode.active = true;
+    this.endInfoUI.active = false;
 
     this.offBtn.opacity = 0;
     this.scorePanelAni.on(
@@ -52,6 +58,7 @@ export default class EndUI extends cc.Component {
   }
 
   onClickHide() {
-    this.node.active = false;
+    this.aniNode.active = false;
+    this.endInfoUI.active = true;
   }
 }

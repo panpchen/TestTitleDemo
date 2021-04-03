@@ -18,7 +18,7 @@ export class PlayerData {
 
   constructor() {
     this._storeData = Utils.getParmFromURL(
-      "https://null.jsbin.com/runner?processId=19211414"
+      "https://null.jsbin.com/runner?processId=19211414" // 测试用
       // window.location.href
     );
   }
@@ -27,6 +27,7 @@ export class PlayerData {
   public paperId = 0;
   public paperName = "";
   public score = 0;
+  public totalTime = 0;
   public subjects = [];
   private _storeData = null;
 
@@ -37,13 +38,9 @@ export class PlayerData {
     this._storeData["paperName"] = this.paperName;
     this._storeData["score"] = this.score;
     this._storeData["subjects"] = this.subjects;
+    this._storeData["totalTime"] = this.totalTime;
 
-    // cc.error(this._storeData);
-    // cc.error(JSON.stringify(this._storeData));
-    // let str = encodeURIComponent(JSON.stringify(this._storeData));
-    let str = JSON.stringify(this._storeData);
-    cc.error(str);
-    cc.error(decodeURIComponent(str));
-    return str;
+    cc.error(this._storeData);
+    return JSON.stringify(this._storeData);
   }
 }
