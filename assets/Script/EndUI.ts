@@ -5,6 +5,7 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import { PlayerData } from "./PlayerData";
 import { Utils } from "./Utils";
 
 const { ccclass, property } = cc._decorator;
@@ -30,7 +31,7 @@ export default class EndUI extends cc.Component {
 
   init(gameTime: number, score: number) {
     cc.error("时间: ", gameTime, "分数: ", score);
-    // this.nameLabel.string = "";
+    this.nameLabel.string = PlayerData.instance().userName;
     this.timeLabel.string = Utils.timeFormat(gameTime);
     this.scoreLabel.string = `${score}分`;
     this.bigScoreLabel.string = score.toString();

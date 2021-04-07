@@ -18,7 +18,7 @@ export class PlayerData {
 
   constructor() {
     this._storeData = Utils.getParmFromURL(
-      // "https://null.jsbin.com/runner?processId=19211414" // 测试用
+      // "https://null.jsbin.com/runner?processId=19211414&&userName=小明" // 测试用
       window.location.href
     );
   }
@@ -30,6 +30,9 @@ export class PlayerData {
   public totalTime = 0;
   public subjects = [];
   private _storeData = null;
+  public get userName() {
+    return this._storeData["userName"];
+  }
 
   public storeData() {
     cc.log("记录数据");
