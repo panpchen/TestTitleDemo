@@ -336,7 +336,7 @@ export default class Game extends cc.Component {
       // 发给客户端信息
       window.injectedObject.startFunction(data);
     };
-    document.body.appendChild(a);
+    // document.body.appendChild(a);
   }
 
   addSelectToList(answerItem: AnswerItem) {
