@@ -31,6 +31,8 @@ export default class Game extends cc.Component {
   gameTimeLabel: cc.Label = null;
   @property(cc.Label)
   gameScoreLabel: cc.Label = null;
+  @property(cc.Node)
+  titleBg: cc.Node = null;
   private _tip: cc.Node = null;
   private _isInitConfig: boolean = false; // 是否加载完题目配置
   private _subjectConfig = null; // 试卷配置
@@ -57,7 +59,6 @@ export default class Game extends cc.Component {
     }
 
     this.initUI.active = true;
-    this.submitBtn.active = false;
 
     // 预加载
     cc.resources.preloadDir("configs", cc.JsonAsset);
@@ -84,7 +85,9 @@ export default class Game extends cc.Component {
 
   gameTimeCallback() {
     this._currentTime++;
-    this.gameTimeLabel.string = Utils.countDownFormat(this._currentTime);
+    this.gameTimeLabel.string = `用时:${Utils.countDownFormat(
+      this._currentTime
+    )}`;
   }
 
   loadSubjectConfig() {
@@ -134,6 +137,10 @@ export default class Game extends cc.Component {
 
     this._titleCfg = this._titleList[this._curTitleId];
 
+    cc.tween(this.titleBg)
+      .to(0.25, { y: 500 }, { easing: "smooth" })
+      .to(0.5, { y: 280 }, { easing: "smooth" })
+      .start();
     // 显示标题
     let titleType = "";
     if (this._titleCfg.titleType == 1) {
@@ -146,22 +153,24 @@ export default class Game extends cc.Component {
     }   ${titleType}`;
 
     // 显示选项列表
-    const optionList = this._titleList[this._curTitleId]["options"];
-    for (let i = 0, len = optionList.length; i < len; i++) {
-      const optionData = optionList[i];
-      let node = null;
-      if (optionData["optionPic"].length == 0) {
-        node = this._createNoPicItem();
-      } else {
-        node = this._createOptionItem();
-      }
-      this._allItemList.push(node.getComponent(AnswerItem));
-      node.getComponent(AnswerItem).init(i, optionData);
-    }
-
     this.scheduleOnce(() => {
-      this._onShowSubmitBtn(true);
-    }, 1);
+      const optionList = this._titleList[this._curTitleId]["options"];
+      for (let i = 0, len = optionList.length; i < len; i++) {
+        const optionData = optionList[i];
+        let node = null;
+        if (optionData["optionPic"].length == 0) {
+          node = this._createNoPicItem();
+        } else {
+          node = this._createOptionItem();
+        }
+        this._allItemList.push(node.getComponent(AnswerItem));
+        node.getComponent(AnswerItem).init(i, optionData);
+      }
+
+      this.scheduleOnce(() => {
+        this._onShowSubmitBtn(true);
+      }, 0.8);
+    }, 0.5);
   }
 
   _showSubmitBtn() {}
@@ -343,7 +352,12 @@ export default class Game extends cc.Component {
 
     PlayerData.instance().subjects.push(newCfg);
 
-    this.gameScoreLabel.string = `${this._currentScore}分`;
+    this.gameScoreLabel.string = `得分:${this._currentScore}分`;
+    cc.tween(this.gameScoreLabel.node)
+      .to(0.2, { scale: 2 }, { easing: "smooth" })
+      .to(0.2, { scale: 1 }, { easing: "smooth" })
+      .start();
+
     PlayerData.instance().score = this._currentScore;
     PlayerData.instance().totalTime = this._currentTime;
   }
