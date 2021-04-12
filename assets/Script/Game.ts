@@ -139,18 +139,20 @@ export default class Game extends cc.Component {
 
     cc.tween(this.titleBg)
       .to(0.25, { y: 500 }, { easing: "smooth" })
-      .to(0.5, { y: 280 }, { easing: "smooth" })
+      .call(() => {
+        // 显示标题
+        let titleType = "";
+        if (this._titleCfg.titleType == 1) {
+          titleType = "(单选题)";
+        } else if (this._titleCfg.titleType == 2) {
+          titleType = "(多选题)";
+        }
+        this.titleLabel.string = `第${this._curTitleId + 1}题: ${
+          this._titleCfg.title
+        }   ${titleType}`;
+      })
+      .to(0.5, { y: 260 }, { easing: "smooth" })
       .start();
-    // 显示标题
-    let titleType = "";
-    if (this._titleCfg.titleType == 1) {
-      titleType = "(单选题)";
-    } else if (this._titleCfg.titleType == 2) {
-      titleType = "(多选题)";
-    }
-    this.titleLabel.string = `第${this._curTitleId + 1}题: ${
-      this._titleCfg.title
-    }   ${titleType}`;
 
     // 显示选项列表
     this.scheduleOnce(() => {
@@ -353,10 +355,12 @@ export default class Game extends cc.Component {
     PlayerData.instance().subjects.push(newCfg);
 
     this.gameScoreLabel.string = `得分:${this._currentScore}分`;
-    cc.tween(this.gameScoreLabel.node)
-      .to(0.2, { scale: 2 }, { easing: "smooth" })
-      .to(0.2, { scale: 1 }, { easing: "smooth" })
-      .start();
+    if (this._currentScore > 0) {
+      cc.tween(this.gameScoreLabel.node)
+        .to(0.2, { scale: 2 }, { easing: "smooth" })
+        .to(0.2, { scale: 1 }, { easing: "smooth" })
+        .start();
+    }
 
     PlayerData.instance().score = this._currentScore;
     PlayerData.instance().totalTime = this._currentTime;

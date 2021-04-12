@@ -59,6 +59,7 @@ export default class AnswerItem extends cc.Component {
     this._optionId = id;
     this._result = data["result"];
     this.toggle.isChecked = false;
+    this.toggle.enabled = false;
     this._optioni = data["optioni"];
     this.label.string = `${this._optioni}.${data["content"]}`;
 
@@ -79,6 +80,7 @@ export default class AnswerItem extends cc.Component {
     }
 
     this.node.opacity = 0;
+    this.node.scale = 1;
     const duration = 0.1 + this.optionId * 0.1;
     this.scheduleOnce(() => {
       cc.tween(this.node)
@@ -86,6 +88,9 @@ export default class AnswerItem extends cc.Component {
         .to(0.1, { opacity: 0 })
         .to(0.1, { opacity: 255, scale: 1.1 })
         .to(0.1, { scale: 1 })
+        .call(() => {
+          this.toggle.enabled = true;
+        })
         .start();
     }, duration);
   }

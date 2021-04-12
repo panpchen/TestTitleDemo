@@ -508,8 +508,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 978,
-      "height": 160
+      "width": 968,
+      "height": 216
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -521,7 +521,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        280,
+        250,
         0,
         0,
         0,
@@ -580,8 +580,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 975,
-      "height": 130
+      "width": 974,
+      "height": 180
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -654,8 +654,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -411,
-        26.157,
+        -418.685,
+        45.37,
         0,
         0,
         0,
@@ -754,7 +754,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        61,
+        86.715,
         0,
         0,
         0,
@@ -942,8 +942,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -475.608,
-        36.264,
+        -487.579,
+        71.993,
         0,
         0,
         0,
@@ -1050,7 +1050,7 @@
       "__uuid__": "96b42b84-3228-4fa2-8bd8-8250772906c2"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -1089,7 +1089,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 1120,
-      "height": 240
+      "height": 0
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1101,7 +1101,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        158.759,
+        138.161,
         0,
         0,
         0,
@@ -1136,7 +1136,7 @@
     "_layoutSize": {
       "__type__": "cc.Size",
       "width": 1120,
-      "height": 240
+      "height": 0
     },
     "_resize": 1,
     "_N$layoutType": 3,
@@ -1150,8 +1150,8 @@
     "_N$paddingRight": 0,
     "_N$paddingTop": 0,
     "_N$paddingBottom": 0,
-    "_N$spacingX": 120,
-    "_N$spacingY": 35,
+    "_N$spacingX": 110,
+    "_N$spacingY": 18,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0,
     "_N$affectedByScale": false,
@@ -1183,7 +1183,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 891,
-      "height": -12
+      "height": 120
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1195,7 +1195,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        164.786,
+        138.161,
         0,
         0,
         0,
@@ -1230,7 +1230,7 @@
     "_layoutSize": {
       "__type__": "cc.Size",
       "width": 891,
-      "height": -12
+      "height": 120
     },
     "_resize": 1,
     "_N$layoutType": 2,
@@ -1288,7 +1288,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -626.628,
+        377.053,
         376.773,
         0,
         0,
@@ -3538,8 +3538,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 120,
-      "height": 37.8
+      "width": 100,
+      "height": 31.5
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3551,7 +3551,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        -327.865,
+        -304.98,
         0,
         0,
         0,
@@ -3592,8 +3592,8 @@
     "_dstBlendFactor": 771,
     "_string": "点击关闭",
     "_N$string": "点击关闭",
-    "_fontSize": 30,
-    "_lineHeight": 30,
+    "_fontSize": 25,
+    "_lineHeight": 25,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
