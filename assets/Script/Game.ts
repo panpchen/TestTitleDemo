@@ -57,7 +57,7 @@ export default class Game extends cc.Component {
     }
 
     this.initUI.active = true;
-    this.submitBtn.active = true;
+    this.submitBtn.active = false;
 
     // 预加载
     cc.resources.preloadDir("configs", cc.JsonAsset);
@@ -158,7 +158,13 @@ export default class Game extends cc.Component {
       this._allItemList.push(node.getComponent(AnswerItem));
       node.getComponent(AnswerItem).init(i, optionData);
     }
+
+    this.scheduleOnce(() => {
+      this._onShowSubmitBtn(true);
+    }, 1);
   }
+
+  _showSubmitBtn() {}
 
   _createOptionItem() {
     let node = null;
@@ -227,9 +233,8 @@ export default class Game extends cc.Component {
     } else {
       this.checkAnswer();
       this.storePlayerData();
-      this.submitBtn.active = false;
       this._selectOptions = [];
-
+      this._onShowSubmitBtn(false);
       if (this.isGameOver()) {
         this.unscheduleAllCallbacks();
         this.unschedule(this.gameTimeCallback);
@@ -248,7 +253,22 @@ export default class Game extends cc.Component {
 
   callback() {
     this.updateContent();
-    this.submitBtn.active = true;
+  }
+
+  _onShowSubmitBtn(enable: boolean) {
+    if (!enable) {
+      cc.tween(this.submitBtn)
+        .to(0.2, { x: 800 }, { easing: "smooth" })
+        .call(() => {
+          this.submitBtn.active = false;
+        })
+        .start();
+    } else {
+      this.submitBtn.active = true;
+      cc.tween(this.submitBtn)
+        .to(0.2, { x: 470 }, { easing: "smooth" })
+        .start();
+    }
   }
 
   checkAnswer() {

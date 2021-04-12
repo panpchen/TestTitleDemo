@@ -77,6 +77,12 @@ export default class AnswerItem extends cc.Component {
         }
       );
     }
+
+    const duration = 0.2 + this.optionId * 0.2;
+    cc.tween(this.node)
+      .to(duration, { opacity: 0 })
+      .to(duration, { opacity: 255 })
+      .start();
   }
 
   onToggleEvent(evt: cc.Toggle, parm) {
