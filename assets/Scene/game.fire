@@ -521,7 +521,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        250,
+        550,
         0,
         0,
         0,
@@ -1959,14 +1959,14 @@
         "__id__": 48
       }
     ],
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 51
       }
     ],
     "_prefab": null,
-    "_opacity": 255,
+    "_opacity": 206,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2031,7 +2031,7 @@
       }
     ],
     "_prefab": null,
-    "_opacity": 192,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 0,

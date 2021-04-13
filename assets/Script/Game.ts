@@ -59,6 +59,7 @@ export default class Game extends cc.Component {
     }
 
     this.initUI.active = true;
+    this.titleBg.y = 550;
 
     // 预加载
     cc.resources.preloadDir("configs", cc.JsonAsset);
@@ -138,7 +139,7 @@ export default class Game extends cc.Component {
     this._titleCfg = this._titleList[this._curTitleId];
 
     cc.tween(this.titleBg)
-      .to(0.25, { y: 500 }, { easing: "smooth" })
+      .to(0.25, { y: 550 }, { easing: "smooth" })
       .call(() => {
         // 显示标题
         let titleType = "";
@@ -355,7 +356,7 @@ export default class Game extends cc.Component {
     PlayerData.instance().subjects.push(newCfg);
 
     this.gameScoreLabel.string = `得分:${this._currentScore}分`;
-    if (this._currentScore > 0) {
+    if (awardScore > 0) {
       cc.tween(this.gameScoreLabel.node)
         .to(0.2, { scale: 2 }, { easing: "smooth" })
         .to(0.2, { scale: 1 }, { easing: "smooth" })
