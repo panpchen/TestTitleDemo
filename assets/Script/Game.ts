@@ -33,6 +33,8 @@ export default class Game extends cc.Component {
   gameScoreLabel: cc.Label = null;
   @property(cc.Node)
   titleBg: cc.Node = null;
+  @property(cc.Node)
+  circleBg: cc.Node = null;
   private _tip: cc.Node = null;
   private _isInitConfig: boolean = false; // 是否加载完题目配置
   private _subjectConfig = null; // 试卷配置
@@ -64,6 +66,7 @@ export default class Game extends cc.Component {
     // 预加载
     cc.resources.preloadDir("configs", cc.JsonAsset);
     cc.resources.preloadDir("optionPics", cc.SpriteFrame);
+    cc.resources.preloadDir("titlePics", cc.SpriteFrame);
 
     this.loadAllConfig()
       .then(() => {
@@ -129,6 +132,7 @@ export default class Game extends cc.Component {
   updateContent() {
     cc.log(`总共${this._titleList.length}题`);
 
+    this._titleCfg = this._titleList[this._curTitleId];
     // 隐藏选项
     this._hideAllItem();
 
@@ -136,11 +140,10 @@ export default class Game extends cc.Component {
       this._titleList.length
     }`;
 
-    this._titleCfg = this._titleList[this._curTitleId];
-
     cc.tween(this.titleBg)
       .to(0.25, { y: 550 }, { easing: "smooth" })
       .call(() => {
+        this.circleBg.active = this._titleCfg["titlePic"].length > 0;
         // 显示标题
         let titleType = "";
         if (this._titleCfg.titleType == 1) {
@@ -151,6 +154,24 @@ export default class Game extends cc.Component {
         this.titleLabel.string = `第${this._curTitleId + 1}题: ${
           this._titleCfg.title
         }   ${titleType}`;
+
+        // 显示标题图片
+        if (this.circleBg.active) {
+          cc.resources.load(
+            `titlePics/${Utils.getPicName(this._titleCfg["titlePic"])}`,
+            cc.SpriteFrame,
+            (err, asset: cc.SpriteFrame) => {
+              if (err) {
+                cc.error(err);
+                return;
+              }
+              this.circleBg
+                .getChildByName("mask")
+                .getChildByName("sp")
+                .getComponent(cc.Sprite).spriteFrame = asset;
+            }
+          );
+        }
       })
       .to(0.5, { y: 260 }, { easing: "smooth" })
       .start();

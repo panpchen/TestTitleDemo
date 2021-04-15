@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import Game from "./Game";
+import { Utils } from "./Utils";
 
 const { ccclass, property } = cc._decorator;
 
@@ -64,10 +65,8 @@ export default class AnswerItem extends cc.Component {
     this.label.string = `${this._optioni}.${data["content"]}`;
 
     if (this.itemBg) {
-      const index = data["optionPic"].lastIndexOf(".");
-      const newSrc = data["optionPic"].substring(0, index);
       cc.resources.load(
-        `optionPics/${newSrc}`,
+        `optionPics/${Utils.getPicName(data["optionPic"])}`,
         cc.SpriteFrame,
         (err, asset: cc.SpriteFrame) => {
           if (err) {

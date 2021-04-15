@@ -134,4 +134,9 @@ export class Utils {
     }
     return str;
   }
+
+  static getPicName(picName: string) {
+    const index = picName.lastIndexOf(".");
+    return picName.substring(0, index);
+  }
 }
