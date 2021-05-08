@@ -78,13 +78,14 @@ export default class AnswerItem extends cc.Component {
       );
     }
 
-    this.node.scale = 1;
     this.node.opacity = 0;
+    this.node.scale = 1;
     const duration = 0.1 + this.optionId * 0.1;
     this.scheduleOnce(() => {
-      this.node.opacity = 255;
       cc.tween(this.node)
-        .to(0.1, { scale: 1.1 })
+        .to(0.1, { opacity: 255 })
+        .to(0.1, { opacity: 0 })
+        .to(0.1, { opacity: 255, scale: 1.1 })
         .to(0.1, { scale: 1 })
         .call(() => {
           this.toggle.enabled = true;
