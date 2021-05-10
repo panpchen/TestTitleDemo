@@ -5,49 +5,42 @@
         "score": 2.0,
         "titleType": 1,
         "answerFlag": 1,
-        "sortName": "生命成长",
+        "sortName": "社会安全",
         "partScore": 1.0,
         "sortId": 1354258554255425538,
         "options": [
           {
-            "result": 1,
+            "result": 2,
             "optioni": "A",
             "id": 1371669366839574530,
-            "optionPic": "1552c36782e5e45c7c400f38737a754c_1354964813024264192.jpg",
-            "content": "不会"
+            "optionPic": "图片1.png",
+            "content": "保持镇静，查找电梯内的求救措施"
           },
           {
             "result": 2,
             "optioni": "B",
             "id": 1371669366839574531,
-            "optionPic": "1552c36782e5e45c7c400f38737a754c_1354964813024264192.jpg",
-            "content": "会"
+            "optionPic": "图片2.jpg",
+            "content": "使用紧急通话按钮求救"
           },
           {
-            "result": 3,
+            "result": 1,
             "optioni": "C",
             "id": 1371669366839574531,
-            "optionPic": "1552c36782e5e45c7c400f38737a754c_1354964813024264192.jpg",
-            "content": "不会"
-          },
-          {
-            "result": 4,
-            "optioni": "D",
-            "id": 1371669366839574531,
-            "optionPic": "1552c36782e5e45c7c400f38737a754c_1354964813024264192.jpg",
-            "content": "会"
+            "optionPic": "图片3.jpg",
+            "content": "用力扒门，在电梯内跳跃"
           }
         ],
-        "titlePic": "test.jpg",
-        "title": "猪笼草不吃蚊子会饿死吗？",
+        "titlePic": "",
+        "title": "垂直电梯停电了,下列哪些处理方式是错误的？",
         "subjectId": 1371669366696968194,
         "paperId": 1371754203432865794
       },
       {
         "score": 2.0,
-        "titleType": 2,
+        "titleType": 1,
         "answerFlag": 1,
-        "sortName": "生命成长",
+        "sortName": "社会安全",
         "partScore": 1.0,
         "sortId": 1354258554255425538,
         "options": [
@@ -56,26 +49,208 @@
             "optioni": "A",
             "id": 1376477701676576769,
             "optionPic": "",
-            "content": "啊啊啊啊啊啊啊啊啊啊啊啊啊啊"
+            "content": "电梯开门后，不用管里面的人有没有出来，赶紧往里面冲"
           },
           {
             "result": 1,
             "optioni": "B",
             "id": 1376477701705936897,
             "optionPic": "",
-            "content": "呃呃呃呃呃呃鹅鹅鹅鹅鹅鹅饿鹅鹅鹅"
+            "content": "发生火灾时，从楼梯安全出口处逃生"
+          },
+          {
+            "result": 2,
+            "optioni": "C",
+            "id": 1376477701705936897,
+            "optionPic": "",
+            "content": "乘坐电梯时，靠在电梯门上会比较舒服 "
           }
         ],
         "titlePic": "",
-        "title": "图片测试",
+        "title": "乘坐垂直电梯时，下列行为哪个是正确的？",
         "subjectId": 1355048359880867841,
         "paperId": 1371754203432865794
       },
       {
         "score": 2.0,
-        "titleType": 2,
+        "titleType": 1,
         "answerFlag": 1,
-        "sortName": "题目分类子项",
+        "sortName": "社会安全",
+        "partScore": 1.0,
+        "sortId": 1354318735106490370,
+        "options": [
+          {
+            "result": 2,
+            "optioni": "A",
+            "id": 1376478172004855810,
+            "optionPic": "",
+            "content": "立即按下停止按钮"
+          },
+          {
+            "result": 2,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "",
+            "content": "扶梯倒行，迅速紧抓扶手，压低身姿保持稳定"
+          },
+          {
+            "result": 1,
+            "optioni": "C",
+            "id": 1376478172055187457,
+            "optionPic": "",
+            "content": "在电梯上蹦，使电梯停止"
+          }
+        ],
+        "titlePic": "",
+        "title": "乘坐扶手电梯时，发生意外下列哪项是错误的？",
+        "subjectId": 1371756336219672577,
+        "paperId": 1371754203432865794
+      },
+      {
+        "score": 2.0,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "社会安全",
+        "partScore": 1.0,
+        "sortId": 1354318735106490370,
+        "options": [
+          {
+            "result": 2,
+            "optioni": "A",
+            "id": 1376478172004855810,
+            "optionPic": "图片4.png",
+            "content": "灌木丛"
+          },
+          {
+            "result": 1,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "图片5.png",
+            "content": "空旷操场"
+          },
+          {
+            "result": 2,
+            "optioni": "C",
+            "id": 1376478172055187457,
+            "optionPic": "图片6.png",
+            "content": "厕所"
+          }
+        ],
+        "titlePic": "",
+        "title": "在学校遇到恐怖分子时，哪些地方不适合躲藏？",
+        "subjectId": 1371756336219672577,
+        "paperId": 1371754203432865794
+      },
+      {
+        "score": 2.0,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "社会安全",
+        "partScore": 1.0,
+        "sortId": 1354318735106490370,
+        "options": [
+          {
+            "result": 2,
+            "optioni": "A",
+            "id": 1376478172004855810,
+            "optionPic": "图片7.png",
+            "content": "保持冷静，找机会逃离"
+          },
+          {
+            "result": 1,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "图片8.png",
+            "content": "大喊大叫，引起别人的注意"
+          },
+          {
+            "result": 2,
+            "optioni": "C",
+            "id": 1376478172055187457,
+            "optionPic": "图片9.png",
+            "content": "不对视，不对话，趴在地上，动作要缓慢"
+          }
+        ],
+        "titlePic": "",
+        "title": "如果被恐怖分子劫持了，以下做法错误的是？",
+        "subjectId": 1371756336219672577,
+        "paperId": 1371754203432865794
+      },
+      {
+        "score": 2.0,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "社会安全",
+        "partScore": 1.0,
+        "sortId": 1354318735106490370,
+        "options": [
+          {
+            "result": 1,
+            "optioni": "A",
+            "id": 1376478172004855810,
+            "optionPic": "图片10.png",
+            "content": "立刻逃离到歹徒视线范围外"
+          },
+          {
+            "result": 2,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "图片11.png",
+            "content": "拿手机拍下歹徒，然后躲在附近看下他想要干什么"
+          },
+          {
+            "result": 2,
+            "optioni": "C",
+            "id": 1376478172055187457,
+            "optionPic": "图片12.png",
+            "content": "联合同学一起用扫把拖把等工具跟歹徒一起搏斗"
+          }
+        ],
+        "titlePic": "",
+        "title": "一个陌生人手持大刀闯入校园，应该怎么做才是正确的呢？",
+        "subjectId": 1371756336219672577,
+        "paperId": 1371754203432865794
+      },
+      {
+        "score": 2.0,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "社会安全",
+        "partScore": 1.0,
+        "sortId": 1354318735106490370,
+        "options": [
+          {
+            "result": 2,
+            "optioni": "A",
+            "id": 1376478172004855810,
+            "optionPic": "图片13.png",
+            "content": "往人多的地方走，找机会逃出视线"
+          },
+          {
+            "result": 2,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "图片14.png",
+            "content": "向警察、保安、工作人员求救。"
+          },
+          {
+            "result": 1,
+            "optioni": "C",
+            "id": 1376478172055187457,
+            "optionPic": "图片15.png",
+            "content": "往人少的地方走"
+          }
+        ],
+        "titlePic": "",
+        "title": "放学回家的路上被陌生人跟踪，以下方法不正确的是？",
+        "subjectId": 1371756336219672577,
+        "paperId": 1371754203432865794
+      },
+      {
+        "score": 2.0,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "社会安全",
         "partScore": 1.0,
         "sortId": 1354318735106490370,
         "options": [
@@ -84,40 +259,96 @@
             "optioni": "A",
             "id": 1376478172004855810,
             "optionPic": "",
-            "content": "是什么"
+            "content": "恐怖袭击的地点和时间、嫌疑人数 伤亡人数"
           },
           {
             "result": 2,
             "optioni": "B",
             "id": 1376478172034215937,
             "optionPic": "",
-            "content": "为什么"
-          },
+            "content": "报警电话只有紧急求救的时候才可以拨打"
+          }
+        ],
+        "titlePic": "",
+        "title": "在逃离恐怖袭击现场后报警要说明哪些内容呢？",
+        "subjectId": 1371756336219672577,
+        "paperId": 1371754203432865794
+      },
+      {
+        "score": 2.0,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "社会安全",
+        "partScore": 1.0,
+        "sortId": 1354318735106490370,
+        "options": [
           {
-            "result": 1,
-            "optioni": "C",
-            "id": 1376478172055187457,
+            "result": 2,
+            "optioni": "A",
+            "id": 1376478172004855810,
             "optionPic": "",
-            "content": "干什么"
+            "content": "在家无聊的时候可以拨打110玩耍"
           },
           {
             "result": 2,
-            "optioni": "D",
-            "id": 1376478172067770369,
+            "optioni": "B",
+            "id": 1376478172034215937,
             "optionPic": "",
-            "content": "怎么干"
+            "content": "去旅游的地方，可以拨打110咨询当地特色"
+          },
+          {
+            "result": 1,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "",
+            "content": "报警电话只有紧急求救的时候才可以拨打"
           }
         ],
-        "titlePic": "test.jpg",
-        "title": "我我来问，你来答！-副本",
+        "titlePic": "",
+        "title": "以下说法正确的是？",
+        "subjectId": 1371756336219672577,
+        "paperId": 1371754203432865794
+      },
+      {
+        "score": 2.0,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "社会安全",
+        "partScore": 1.0,
+        "sortId": 1354318735106490370,
+        "options": [
+          {
+            "result": 2,
+            "optioni": "A",
+            "id": 1376478172004855810,
+            "optionPic": "",
+            "content": "如果在学校遇到有人向你收保护费怎么办"
+          },
+          {
+            "result": 1,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "",
+            "content": "告诉父母、老师"
+          },
+          {
+            "result": 2,
+            "optioni": "B",
+            "id": 1376478172034215937,
+            "optionPic": "",
+            "content": "找人下次收回来"
+          }
+        ],
+        "titlePic": "",
+        "title": "如果在学校遇到有人向你收保护费怎么办？",
         "subjectId": 1371756336219672577,
         "paperId": 1371754203432865794
       }
     ],
     "answerCount": 0,
     "sortId": 1354258554255425538,
-    "answerDuration": 77,
-    "name": "ppp",
+    "answerDuration": 60,
+    "name": "社会安全",
     "id": 13717503432865794,
     "totalScore": 0
   }
