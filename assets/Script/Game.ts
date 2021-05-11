@@ -73,9 +73,8 @@ export default class Game extends cc.Component {
         cc.log("评测配置全部加载完");
         this._titleList = this._subjectConfig["subjectList"];
         this._isInitConfig = true;
-        this.initUI
-          .getChildByName("title")
-          .getComponent(cc.Label).string = this._subjectConfig.name;
+        this.initUI.getChildByName("title").getComponent(cc.Label).string =
+          this._subjectConfig.name;
         this.updateContent();
       })
       .catch(() => {
@@ -391,12 +390,17 @@ export default class Game extends cc.Component {
   storePlayerData() {
     const data = PlayerData.instance().storeData();
 
-    const a = document.createElement("a");
-    a.onclick = () => {
-      // 发给客户端信息
-      window.injectedObject.startFunction(data);
-    };
+    cc.error("发送数据");
+    window?.injectedObject?.startFunction(data);
+
+    // const a = document.createElement("a");
+    // a.onclick = () => {
+    //   cc.error("发送数据2");
+    //   // 发给客户端信息
+    //   window.injectedObject.startFunction(data);
+    // };
     // document.body.appendChild(a);
+    // cc.error("发送数据3");
   }
 
   addSelectToList(answerItem: AnswerItem) {
