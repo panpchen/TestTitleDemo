@@ -388,19 +388,12 @@ export default class Game extends cc.Component {
   }
 
   storePlayerData() {
-    const data = PlayerData.instance().storeData();
-
-    cc.error("发送数据");
-    window?.injectedObject?.startFunction(data);
-
-    // const a = document.createElement("a");
-    // a.onclick = () => {
-    //   cc.error("发送数据2");
-    //   // 发给客户端信息
-    //   window.injectedObject.startFunction(data);
-    // };
-    // document.body.appendChild(a);
-    // cc.error("发送数据3");
+    if (cc.sys.isMobile) {
+      cc.error("发送数据");
+      const data = PlayerData.instance().storeData();
+      // webview与js交互
+      window?.injectedObject?.startFunction(data);
+    }
   }
 
   addSelectToList(answerItem: AnswerItem) {
