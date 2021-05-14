@@ -355,17 +355,6 @@ export default class Game extends cc.Component {
     newCfg["type"] = this._titleCfg["titleType"];
     newCfg["score"] = awardScore;
     newCfg["options"] = [];
-
-    // if (!this._constSelectOptions[this._curTitleId]) {
-    //   this._constSelectOptions[this._curTitleId] = [];
-    // }
-    // this._constSelectOptions[this._curTitleId] = this._selectOptions;
-
-    // const options = [];
-    // for (let i = 0; i < this._constSelectOptions.length; i++) {
-    //   options[i] = this._constSelectOptions[i].map((item) => item["optioni"]);
-    // }
-
     for (let i = 0; i < this._selectOptions.length; i++) {
       newCfg["options"][i] = {};
       newCfg["options"][i]["id"] = this._selectOptions[i].titleId;
