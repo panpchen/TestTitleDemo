@@ -42,6 +42,7 @@ export class PlayerData {
     this._storeData["score"] = this.score;
     this._storeData["subjects"] = this.subjects;
     this._storeData["totalTime"] = this.totalTime;
+    this._storeData["num"] = 0;
 
     cc.error(this._storeData);
     return JSON.stringify(this._storeData);
