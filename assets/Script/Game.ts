@@ -264,10 +264,10 @@ export default class Game extends cc.Component {
       this.showTips("题目配置在加载中,请等候...");
     } else {
       this.checkAnswer();
-      this.storePlayerData();
       this._selectOptions = [];
       this._onShowSubmitBtn(false);
       if (this.isGameOver()) {
+        this.storePlayerData();
         this.unscheduleAllCallbacks();
         this.unschedule(this.gameTimeCallback);
         this.scheduleOnce(() => {
