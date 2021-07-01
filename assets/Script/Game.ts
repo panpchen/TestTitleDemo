@@ -17,8 +17,8 @@ export default class Game extends cc.Component {
   itemNoPicPrefab: cc.Prefab = null;
   @property(cc.Node)
   itemParent: cc.Node = null;
-  @property(cc.Node)
-  itemNoPicParent: cc.Node = null;
+  @property(cc.ScrollView)
+  itemNoPicParent: cc.ScrollView = null;
   @property(cc.Prefab)
   tipPrefab: cc.Prefab = null;
   @property(cc.Node)
@@ -132,8 +132,11 @@ export default class Game extends cc.Component {
     cc.log(`总共${this._titleList.length}题`);
 
     this._titleCfg = this._titleList[this._curTitleId];
+
     // 隐藏选项
     this._hideAllItem();
+
+    this.itemNoPicParent.scrollToTop();
 
     this.titleNumLabel.string = `${this._curTitleId + 1}/${
       this._titleList.length
@@ -212,7 +215,7 @@ export default class Game extends cc.Component {
     if (!node) {
       node = cc.instantiate(this.itemNoPicPrefab);
     }
-    node.parent = this.itemNoPicParent;
+    node.parent = this.itemNoPicParent.content;
     return node;
   }
 
@@ -221,8 +224,8 @@ export default class Game extends cc.Component {
       this._itemPool.put(this.itemParent.children[i]);
     }
 
-    for (let i = this.itemNoPicParent.childrenCount - 1; i >= 0; i--) {
-      this._itemNoPicPool.put(this.itemNoPicParent.children[i]);
+    for (let i = this.itemNoPicParent.content.childrenCount - 1; i >= 0; i--) {
+      this._itemNoPicPool.put(this.itemNoPicParent.content.children[i]);
     }
 
     this._allItemList = [];
