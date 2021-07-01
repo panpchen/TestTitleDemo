@@ -206,6 +206,7 @@ export default class Game extends cc.Component {
     } else {
       node = cc.instantiate(this.itemPrefab);
     }
+    this.itemParent.active = true;
     node.parent = this.itemParent;
     return node;
   }
@@ -215,6 +216,7 @@ export default class Game extends cc.Component {
     if (!node) {
       node = cc.instantiate(this.itemNoPicPrefab);
     }
+    this.itemNoPicParent.node.active = true;
     node.parent = this.itemNoPicParent.content;
     return node;
   }
@@ -229,6 +231,8 @@ export default class Game extends cc.Component {
     }
 
     this._allItemList = [];
+    this.itemParent.active = false;
+    this.itemNoPicParent.node.active = false;
   }
 
   showTips(content) {
