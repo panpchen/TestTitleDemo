@@ -146,13 +146,13 @@ export default class Game extends cc.Component {
         // 显示标题
         let titleType = "";
         if (this._titleCfg.titleType == 1) {
-          titleType = "(单选题)";
+          titleType = "(单选)";
         } else if (this._titleCfg.titleType == 2) {
-          titleType = "(多选题)";
+          titleType = "(多选)";
         }
         this.titleLabel.string = `第${this._curTitleId + 1}题: ${
           this._titleCfg.title
-        }   ${titleType}`;
+        } ${titleType}`;
 
         // 显示标题图片
         if (this.circleBg.active) {
@@ -196,8 +196,6 @@ export default class Game extends cc.Component {
     }, 0.5);
   }
 
-  _showSubmitBtn() {}
-
   _createOptionItem() {
     let node = null;
     if (this._itemPool.size() > 0) {
@@ -210,11 +208,9 @@ export default class Game extends cc.Component {
   }
 
   _createNoPicItem() {
-    let node = null;
-    if (this._itemPool.size() > 0) {
-      node = this._itemNoPicPool.get();
-    } else {
-      node = cc.instantiate(this.itemPrefab);
+    let node = this._itemNoPicPool.get();
+    if (!node) {
+      node = cc.instantiate(this.itemNoPicPrefab);
     }
     node.parent = this.itemNoPicParent;
     return node;

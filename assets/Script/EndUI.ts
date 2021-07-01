@@ -34,7 +34,7 @@ export default class EndUI extends cc.Component {
     this.nameLabel.string = PlayerData.instance().userName;
     this.timeLabel.string = Utils.timeFormat(gameTime);
     this.scoreLabel.string = `${score}分`;
-    this.bigScoreLabel.string = score.toString();
+    this.bigScoreLabel.string = `${score}分`;
     this.showOffBtn(false);
     this.aniNode.active = true;
     this.endInfoUI.active = false;

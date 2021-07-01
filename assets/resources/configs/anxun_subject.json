@@ -2,354 +2,186 @@
   {
     "subjectList": [
       {
-        "score": 2.0,
+        "score": 25,
         "titleType": 1,
         "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
+        "sortName": "生命成长",
+        "partScore": 20.0,
         "sortId": 1354258554255425538,
         "options": [
           {
             "result": 2,
             "optioni": "A",
-            "id": 1371669366839574530,
-            "optionPic": "图片1.png",
-            "content": "保持镇静，查找电梯内的求救措施"
+            "id": 1400730018497286146,
+            "optionPic": "",
+            "content": "2007年3月"
           },
           {
             "result": 2,
             "optioni": "B",
-            "id": 1371669366839574531,
+            "id": 1400730018501480449,
+            "optionPic": "",
+            "content": "2009年12月"
+          },
+          {
+            "result": 2,
+            "optioni": "C",
+            "id": 1400730018501480450,
+            "optionPic": "",
+            "content": "2017年3月"
+          },
+          {
+            "result": 1,
+            "optioni": "D",
+            "id": 1400730018501480451,
+            "optionPic": "",
+            "content": "2018年10月"
+          }
+        ],
+        "titlePic": "",
+        "title": "视频中的超级工程——港珠澳大桥是什么时候正式开通运行的呢?",
+        "subjectId": 1400729420821549058,
+        "paperId": 1400732528523988993
+      },
+      {
+        "score": 25,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "生命成长",
+        "partScore": 0.0,
+        "sortId": 1354258554255425538,
+        "options": [
+          {
+            "result": 1,
+            "optioni": "A",
+            "id": 1400730672062124033,
+            "optionPic": "图片1.jpg",
+            "content": "林鸣"
+          },
+          {
+            "result": 2,
+            "optioni": "B",
+            "id": 1400730672062124034,
             "optionPic": "图片2.jpg",
-            "content": "使用紧急通话按钮求救"
+            "content": "苏权科"
           },
           {
-            "result": 1,
+            "result": 2,
             "optioni": "C",
-            "id": 1371669366839574531,
+            "id": 1400730672062124035,
             "optionPic": "图片3.jpg",
-            "content": "用力扒门，在电梯内跳跃"
+            "content": "孟凡超"
+          },
+          {
+            "result": 2,
+            "optioni": "D",
+            "id": 1400730672062124036,
+            "optionPic": "图片4.jpg",
+            "content": "张宝兰"
           }
         ],
         "titlePic": "",
-        "title": "垂直电梯停电了,下列哪些处理方式是错误的？",
-        "subjectId": 1371669366696968194,
-        "paperId": 1371754203432865794
+        "title": "请问要完成港珠澳大桥桥梁总工程师是谁呢?",
+        "subjectId": 1400730672032763906,
+        "paperId": 1400732528523988993
       },
       {
-        "score": 2.0,
+        "score": 25,
         "titleType": 1,
         "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
+        "sortName": "生命成长",
+        "partScore": 0.0,
         "sortId": 1354258554255425538,
         "options": [
           {
             "result": 2,
             "optioni": "A",
-            "id": 1376477701676576769,
+            "id": 1400731376713584641,
             "optionPic": "",
-            "content": "电梯开门后，不用管里面的人有没有出来，赶紧往里面冲"
-          },
-          {
-            "result": 1,
-            "optioni": "B",
-            "id": 1376477701705936897,
-            "optionPic": "",
-            "content": "发生火灾时，从楼梯安全出口处逃生"
-          },
-          {
-            "result": 2,
-            "optioni": "C",
-            "id": 1376477701705936897,
-            "optionPic": "",
-            "content": "乘坐电梯时，靠在电梯门上会比较舒服 "
-          }
-        ],
-        "titlePic": "",
-        "title": "乘坐垂直电梯时，下列行为哪个是正确的？",
-        "subjectId": 1355048359880867841,
-        "paperId": 1371754203432865794
-      },
-      {
-        "score": 2.0,
-        "titleType": 1,
-        "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
-        "options": [
-          {
-            "result": 2,
-            "optioni": "A",
-            "id": 1376478172004855810,
-            "optionPic": "",
-            "content": "立即按下停止按钮"
+            "content": "桥梁+海底隧道"
           },
           {
             "result": 2,
             "optioni": "B",
-            "id": 1376478172034215937,
+            "id": 1400731376717778945,
             "optionPic": "",
-            "content": "扶梯倒行，迅速紧抓扶手，压低身姿保持稳定"
+            "content": "桥梁+人工岛"
           },
           {
             "result": 1,
             "optioni": "C",
-            "id": 1376478172055187457,
+            "id": 1400731376721973250,
             "optionPic": "",
-            "content": "在电梯上蹦，使电梯停止"
+            "content": "桥梁+海底隧道+人工岛"
+          },
+          {
+            "result": 2,
+            "optioni": "D",
+            "id": 1400731376726167553,
+            "optionPic": "",
+            "content": "海底隧道+人工岛"
           }
         ],
         "titlePic": "",
-        "title": "乘坐扶手电梯时，发生意外下列哪项是错误的？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
+        "title": "港珠澳大桥都由哪些部分组成的呢?",
+        "subjectId": 1400731376680030210,
+        "paperId": 1400732528523988993
       },
       {
-        "score": 2.0,
+        "score": 25,
         "titleType": 1,
         "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
+        "sortName": "生命成长",
+        "partScore": 0.0,
+        "sortId": 1354258554255425538,
         "options": [
           {
             "result": 2,
             "optioni": "A",
-            "id": 1376478172004855810,
-            "optionPic": "图片4.png",
-            "content": "灌木丛"
-          },
-          {
-            "result": 1,
-            "optioni": "B",
-            "id": 1376478172034215937,
-            "optionPic": "图片5.png",
-            "content": "空旷操场"
-          },
-          {
-            "result": 2,
-            "optioni": "C",
-            "id": 1376478172055187457,
-            "optionPic": "图片6.png",
-            "content": "厕所"
-          }
-        ],
-        "titlePic": "",
-        "title": "在学校遇到恐怖分子时，哪些地方不适合躲藏？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
-      },
-      {
-        "score": 2.0,
-        "titleType": 1,
-        "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
-        "options": [
-          {
-            "result": 2,
-            "optioni": "A",
-            "id": 1376478172004855810,
-            "optionPic": "图片7.png",
-            "content": "保持冷静，找机会逃离"
-          },
-          {
-            "result": 1,
-            "optioni": "B",
-            "id": 1376478172034215937,
-            "optionPic": "图片8.png",
-            "content": "大喊大叫，引起别人的注意"
-          },
-          {
-            "result": 2,
-            "optioni": "C",
-            "id": 1376478172055187457,
-            "optionPic": "图片9.png",
-            "content": "不对视，不对话，趴在地上，动作要缓慢"
-          }
-        ],
-        "titlePic": "",
-        "title": "如果被恐怖分子劫持了，以下做法错误的是？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
-      },
-      {
-        "score": 2.0,
-        "titleType": 1,
-        "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
-        "options": [
-          {
-            "result": 1,
-            "optioni": "A",
-            "id": 1376478172004855810,
-            "optionPic": "图片10.png",
-            "content": "立刻逃离到歹徒视线范围外"
+            "id": 1400731875928035329,
+            "optionPic": "",
+            "content": "GUANGZHOU"
           },
           {
             "result": 2,
             "optioni": "B",
-            "id": 1376478172034215937,
-            "optionPic": "图片11.png",
-            "content": "拿手机拍下歹徒，然后躲在附近看下他想要干什么"
-          },
-          {
-            "result": 2,
-            "optioni": "C",
-            "id": 1376478172055187457,
-            "optionPic": "图片12.png",
-            "content": "联合同学一起用扫把拖把等工具跟歹徒一起搏斗"
-          }
-        ],
-        "titlePic": "",
-        "title": "一个陌生人手持大刀闯入校园，应该怎么做才是正确的呢？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
-      },
-      {
-        "score": 2.0,
-        "titleType": 1,
-        "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
-        "options": [
-          {
-            "result": 2,
-            "optioni": "A",
-            "id": 1376478172004855810,
-            "optionPic": "图片13.png",
-            "content": "往人多的地方走，找机会逃出视线"
-          },
-          {
-            "result": 2,
-            "optioni": "B",
-            "id": 1376478172034215937,
-            "optionPic": "图片14.png",
-            "content": "向警察、保安、工作人员求救。"
+            "id": 1400731875936423938,
+            "optionPic": "",
+            "content": "SHENZHEN"
           },
           {
             "result": 1,
             "optioni": "C",
-            "id": 1376478172055187457,
-            "optionPic": "图片15.png",
-            "content": "往人少的地方走"
-          }
-        ],
-        "titlePic": "",
-        "title": "放学回家的路上被陌生人跟踪，以下方法不正确的是？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
-      },
-      {
-        "score": 2.0,
-        "titleType": 1,
-        "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
-        "options": [
-          {
-            "result": 1,
-            "optioni": "A",
-            "id": 1376478172004855810,
+            "id": 1400731875940618242,
             "optionPic": "",
-            "content": "恐怖袭击的地点和时间、嫌疑人数 伤亡人数"
-          },
-          {
-            "result": 2,
-            "optioni": "B",
-            "id": 1376478172034215937,
-            "optionPic": "",
-            "content": "报警电话只有紧急求救的时候才可以拨打"
-          }
-        ],
-        "titlePic": "",
-        "title": "在逃离恐怖袭击现场后报警要说明哪些内容呢？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
-      },
-      {
-        "score": 2.0,
-        "titleType": 1,
-        "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
-        "options": [
-          {
-            "result": 2,
-            "optioni": "A",
-            "id": 1376478172004855810,
-            "optionPic": "",
-            "content": "在家无聊的时候可以拨打110玩耍"
-          },
-          {
-            "result": 2,
-            "optioni": "B",
-            "id": 1376478172034215937,
-            "optionPic": "",
-            "content": "去旅游的地方，可以拨打110咨询当地特色"
+            "content": "XIANGGANG"
           },
           {
             "result": 1,
-            "optioni": "C",
-            "id": 1376478172034215937,
+            "optioni": "D",
+            "id": 1400731875940618242,
             "optionPic": "",
-            "content": "报警电话只有紧急求救的时候才可以拨打"
-          }
-        ],
-        "titlePic": "",
-        "title": "以下说法正确的是？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
-      },
-      {
-        "score": 2.0,
-        "titleType": 1,
-        "answerFlag": 1,
-        "sortName": "社会安全",
-        "partScore": 1.0,
-        "sortId": 1354318735106490370,
-        "options": [
-          {
-            "result": 2,
-            "optioni": "A",
-            "id": 1376478172004855810,
-            "optionPic": "",
-            "content": "找人打收保护费的"
+            "content": "AOMEN"
           },
           {
             "result": 1,
-            "optioni": "B",
-            "id": 1376478172034215937,
+            "optioni": "E",
+            "id": 1400731875940618242,
             "optionPic": "",
-            "content": "告诉父母、老师"
-          },
-          {
-            "result": 2,
-            "optioni": "C",
-            "id": 1376478172034215937,
-            "optionPic": "",
-            "content": "找人下次收回来"
+            "content": "ZHUHAI"
           }
         ],
         "titlePic": "",
-        "title": "如果在学校遇到有人向你收保护费怎么办？",
-        "subjectId": 1371756336219672577,
-        "paperId": 1371754203432865794
+        "title": "港珠澳大桥连接的是我国的哪些城市呢?",
+        "subjectId": 1400731875881897986,
+        "paperId": 1400732528523988993
       }
     ],
     "answerCount": 0,
     "sortId": 1354258554255425538,
-    "answerDuration": 60,
-    "name": "社会安全",
-    "id": 13717503432865794,
+    "answerDuration": 3,
+    "name": "超级工程”走出的“深海钳工",
+    "id": 1400732528523988993,
     "totalScore": 0
   }
 ]

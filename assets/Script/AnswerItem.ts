@@ -63,7 +63,6 @@ export default class AnswerItem extends cc.Component {
     this.toggle.enabled = false;
     this._optioni = data["optioni"];
     this.label.string = `${this._optioni}.${data["content"]}`;
-
     if (this.itemBg) {
       cc.resources.load(
         `optionPics/${Utils.getPicName(data["optionPic"])}`,
@@ -74,6 +73,8 @@ export default class AnswerItem extends cc.Component {
             return;
           }
           this.itemBg.spriteFrame = asset;
+          this.itemBg.node.width =
+            asset._originalSize.width / (asset._originalSize.height / 164);
         }
       );
     }
