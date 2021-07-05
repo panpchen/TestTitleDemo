@@ -29,6 +29,7 @@ export class PlayerData {
   public score = 0;
   public totalTime = 0;
   public subjects = [];
+  public correctNum = 0;
   private _storeData = null;
   public get userName() {
     return this._storeData["userName"];
@@ -43,7 +44,7 @@ export class PlayerData {
     this._storeData["subjects"] = this.subjects;
     this._storeData["totalTime"] = this.totalTime;
     this._storeData["type"] = 1;
-    this._storeData["num"] = 0;
+    this._storeData["num"] = this.correctNum;
 
     cc.error(this._storeData);
     return JSON.stringify(this._storeData);

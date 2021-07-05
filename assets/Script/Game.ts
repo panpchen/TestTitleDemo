@@ -345,6 +345,7 @@ export default class Game extends cc.Component {
       correctNum == allAnswerList.length
     ) {
       awardScore = this._titleCfg["score"];
+      PlayerData.instance().correctNum++;
       cc.error("全对: ", awardScore);
     } else if (correctNum > 0) {
       awardScore = this._titleCfg["partScore"];
