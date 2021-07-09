@@ -6,217 +6,217 @@
         "titleType": 2,
         "answerFlag": 1,
         "sortName": "生命成长",
-        "partScore": 10,
+        "partScore": 10.0,
         "sortId": 1354258554255425538,
         "options": [
           {
             "result": 1,
             "optioni": "A",
-            "id": 1410484185239973889,
+            "id": 1413387043004805121,
             "optionPic": "",
             "content": "服装和道具"
           },
           {
             "result": 1,
             "optioni": "B",
-            "id": 1410484185265139714,
+            "id": 1413387043021582337,
             "optionPic": "",
             "content": "动作和情绪"
           },
           {
             "result": 1,
             "optioni": "C",
-            "id": 1410484185281916929,
+            "id": 1413387043034165249,
             "optionPic": "",
             "content": "台词和舞蹈"
           },
           {
             "result": 1,
             "optioni": "D",
-            "id": 1410484185298694145,
+            "id": 1413387043046748161,
             "optionPic": "",
             "content": "位置和队形"
           }
         ],
         "titlePic": "图片1.jpg",
         "title": "舞台表演的过程中通过什么来表现角色？",
-        "subjectId": 1410484184455639042,
-        "paperId": 1410487717867352065
+        "subjectId": 1413387042753146881,
+        "paperId": 1413388798404915202
       },
       {
         "score": 20.0,
         "titleType": 2,
         "answerFlag": 1,
-        "sortName": "生命成长",
-        "partScore": 10,
-        "sortId": 1354258554255425538,
+        "sortName": "添加题目类",
+        "partScore": 10.0,
+        "sortId": 1370261208330014722,
         "options": [
           {
             "result": 1,
             "optioni": "A",
-            "id": 1410485072184274946,
+            "id": 1413387992402292738,
             "optionPic": "",
             "content": "扮演最重要的角色"
           },
           {
             "result": 1,
             "optioni": "B",
-            "id": 1410485072205246465,
+            "id": 1413387992477790209,
             "optionPic": "",
             "content": "站最重要的位置"
           },
           {
             "result": 2,
             "optioni": "C",
-            "id": 1410485072213635074,
+            "id": 1413387992507150337,
             "optionPic": "",
             "content": "永远站在最前面的人"
           },
           {
             "result": 2,
             "optioni": "D",
-            "id": 1410485072213635075,
+            "id": 1413387992523927554,
             "optionPic": "",
             "content": "永远站在中间的人"
           }
         ],
         "titlePic": "图片2.jpg",
         "title": "舞台上什么是领舞？",
-        "subjectId": 1410484482460938241,
-        "paperId": 1410487717867352065
+        "subjectId": 1413387992230326273,
+        "paperId": 1413388798404915202
       },
       {
-        "score": 20,
+        "score": 20.0,
         "titleType": 1,
         "answerFlag": 1,
-        "sortName": "生命成长",
-        "partScore": 10,
-        "sortId": 1354258554255425538,
+        "sortName": "添加题目类",
+        "partScore": 0.0,
+        "sortId": 1370261208330014722,
         "options": [
           {
             "result": 2,
             "optioni": "A",
-            "id": 1410487394494902274,
+            "id": 1413388261009715201,
             "optionPic": "",
             "content": "化妆会更漂亮"
           },
           {
             "result": 1,
             "optioni": "B",
-            "id": 1410487394515873794,
+            "id": 1413388261026492417,
             "optionPic": "",
             "content": "突出脸部的效果"
           },
           {
             "result": 2,
             "optioni": "C",
-            "id": 1410487394528456706,
+            "id": 1413388261034881025,
             "optionPic": "",
             "content": "区分舞台上的角色"
           },
           {
             "result": 2,
             "optioni": "D",
-            "id": 1410487394541039617,
+            "id": 1413388261047463937,
             "optionPic": "",
             "content": "搭配表演的服饰"
           }
         ],
         "titlePic": "图片3.jpg",
         "title": "为什么上舞台要化妆呢，最主要的原因的是？",
-        "subjectId": 1410487394293575682,
-        "paperId": 1410487717867352065
+        "subjectId": 1413388260976160770,
+        "paperId": 1413388798404915202
       },
       {
-        "score": 20,
+        "score": 20.0,
         "titleType": 1,
         "answerFlag": 1,
-        "sortName": "生命成长",
-        "partScore": 10,
-        "sortId": 1354258554255425538,
+        "sortName": "添加题目类",
+        "partScore": 0.0,
+        "sortId": 1370261208330014722,
         "options": [
           {
             "result": 2,
             "optioni": "A",
-            "id": 1410487622971224066,
+            "id": 1413388495391617026,
             "optionPic": "",
             "content": "黑色的光"
           },
           {
             "result": 1,
             "optioni": "B",
-            "id": 1410487622988001281,
+            "id": 1413388495404199937,
             "optionPic": "",
             "content": "紫色的光"
           },
           {
             "result": 2,
             "optioni": "C",
-            "id": 1410487623004778497,
+            "id": 1413388495416782849,
             "optionPic": "",
             "content": "灰色的光"
           },
           {
             "result": 2,
             "optioni": "D",
-            "id": 1410487623017361409,
+            "id": 1413388495425171458,
             "optionPic": "",
             "content": "等于没有光"
           }
         ],
         "titlePic": "",
         "title": "舞台上黑光是什么颜色的光？",
-        "subjectId": 1410487622669234178,
-        "paperId": 1410487717867352065
+        "subjectId": 1413388495358062593,
+        "paperId": 1413388798404915202
       },
       {
-        "score": 20,
+        "score": 20.0,
         "titleType": 1,
         "answerFlag": 1,
-        "sortName": "生命成长",
-        "partScore": 10,
-        "sortId": 1354258554255425538,
+        "sortName": "添加题目类",
+        "partScore": 0.0,
+        "sortId": 1370261208330014722,
         "options": [
           {
             "result": 1,
             "optioni": "A",
-            "id": 1410487622971224066,
+            "id": 1413388689558532098,
             "optionPic": "",
             "content": "熄光跑下场"
           },
           {
             "result": 2,
             "optioni": "B",
-            "id": 1410487622988001281,
+            "id": 1413388689571115009,
             "optionPic": "",
             "content": "鼓掌结束再下场"
           },
           {
             "result": 2,
             "optioni": "C",
-            "id": 1410487623004778497,
+            "id": 1413388689583697921,
             "optionPic": "",
             "content": "表演结束就下场"
           },
           {
             "result": 2,
             "optioni": "D",
-            "id": 1410487623017361409,
+            "id": 1413388689592086530,
             "optionPic": "",
             "content": "什么情况都可以下场"
           }
         ],
         "titlePic": "",
         "title": "表演结束或中途退场应该如何下场？",
-        "subjectId": 1410487622669234178,
-        "paperId": 1410487717867352065
+        "subjectId": 1413388689524977666,
+        "paperId": 1413388798404915202
       }
     ],
     "answerCount": 0,
-    "sortId": 1354258554255425538,
-    "answerDuration": 5,
-    "name": "舞蹈测试题",
-    "id": 1410487717867352065,
+    "sortId": 1370261208330014722,
+    "answerDuration": 1,
+    "name": "经典戏剧芭蕾",
+    "id": 1413388798404915202,
     "totalScore": 0
   }
 ]
