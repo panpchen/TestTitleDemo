@@ -2,95 +2,95 @@
   {
     "subjectList": [
       {
-        "score": 25.0,
-        "titleType": 1,
+        "score": 20.0,
+        "titleType": 2,
         "answerFlag": 1,
         "sortName": "生命成长",
-        "partScore": 12.5,
+        "partScore": 10,
         "sortId": 1354258554255425538,
         "options": [
           {
-            "result": 2,
+            "result": 1,
             "optioni": "A",
             "id": 1410484185239973889,
             "optionPic": "",
-            "content": "2007年3月"
+            "content": "服装和道具"
           },
           {
-            "result": 2,
+            "result": 1,
             "optioni": "B",
             "id": 1410484185265139714,
             "optionPic": "",
-            "content": "2009年12月"
+            "content": "动作和情绪"
           },
           {
-            "result": 2,
+            "result": 1,
             "optioni": "C",
             "id": 1410484185281916929,
             "optionPic": "",
-            "content": "2017年3月"
+            "content": "台词和舞蹈"
           },
           {
             "result": 1,
             "optioni": "D",
             "id": 1410484185298694145,
             "optionPic": "",
-            "content": "2018年10月"
+            "content": "位置和队形"
           }
         ],
-        "titlePic": "",
-        "title": "视频中的超级工程——港珠澳大桥是什么时候正式开通运行的呢？",
+        "titlePic": "图片1.jpg",
+        "title": "舞台表演的过程中通过什么来表现角色？",
         "subjectId": 1410484184455639042,
         "paperId": 1410487717867352065
       },
       {
-        "score": 25.0,
-        "titleType": 1,
+        "score": 20.0,
+        "titleType": 2,
         "answerFlag": 1,
         "sortName": "生命成长",
-        "partScore": 12.5,
+        "partScore": 10,
         "sortId": 1354258554255425538,
         "options": [
           {
             "result": 1,
             "optioni": "A",
             "id": 1410485072184274946,
-            "optionPic": "de2a50fb98f52b36e3b7a4b1ceda3b46_1410484755599175680.png",
-            "content": "林鸣"
+            "optionPic": "",
+            "content": "扮演最重要的角色"
           },
           {
-            "result": 2,
+            "result": 1,
             "optioni": "B",
             "id": 1410485072205246465,
-            "optionPic": "1d72e0920c3fcff86125a20b511fe7b8_1410484880908201984.png",
-            "content": "苏权科"
+            "optionPic": "",
+            "content": "站最重要的位置"
           },
           {
             "result": 2,
             "optioni": "C",
             "id": 1410485072213635074,
-            "optionPic": "770071e7e8d68d64b22d6fe68e4b5b3c_1410484965599588352.png",
-            "content": "孟凡超"
+            "optionPic": "",
+            "content": "永远站在最前面的人"
           },
           {
             "result": 2,
             "optioni": "D",
             "id": 1410485072213635075,
-            "optionPic": "0b391de46960581950a56f45c9ee3bcb_1410484988773117952.png",
-            "content": "张宝兰"
+            "optionPic": "",
+            "content": "永远站在中间的人"
           }
         ],
-        "titlePic": "",
-        "title": "请问要完成港珠澳大桥桥梁总工程师是谁呢？",
+        "titlePic": "图片2.jpg",
+        "title": "舞台上什么是领舞？",
         "subjectId": 1410484482460938241,
         "paperId": 1410487717867352065
       },
       {
-        "score": 25.0,
+        "score": 20,
         "titleType": 1,
         "answerFlag": 1,
         "sortName": "生命成长",
-        "partScore": 12.5,
+        "partScore": 10,
         "sortId": 1354258554255425538,
         "options": [
           {
@@ -98,41 +98,41 @@
             "optioni": "A",
             "id": 1410487394494902274,
             "optionPic": "",
-            "content": "桥梁 加 海底隧道"
-          },
-          {
-            "result": 2,
-            "optioni": "B",
-            "id": 1410487394515873794,
-            "optionPic": "",
-            "content": "桥梁  加 人工岛"
+            "content": "化妆会更漂亮"
           },
           {
             "result": 1,
+            "optioni": "B",
+            "id": 1410487394515873794,
+            "optionPic": "",
+            "content": "突出脸部的效果"
+          },
+          {
+            "result": 2,
             "optioni": "C",
             "id": 1410487394528456706,
             "optionPic": "",
-            "content": "桥梁 加  海底隧道 加 人工岛"
+            "content": "区分舞台上的角色"
           },
           {
             "result": 2,
             "optioni": "D",
             "id": 1410487394541039617,
             "optionPic": "",
-            "content": "海底隧道 加 人工岛"
+            "content": "搭配表演的服饰"
           }
         ],
-        "titlePic": "",
-        "title": "港珠澳大桥都由哪些部分组成的呢？",
+        "titlePic": "图片3.jpg",
+        "title": "为什么上舞台要化妆呢，最主要的原因的是？",
         "subjectId": 1410487394293575682,
         "paperId": 1410487717867352065
       },
       {
-        "score": 25.0,
+        "score": 20,
         "titleType": 1,
         "answerFlag": 1,
         "sortName": "生命成长",
-        "partScore": 12.5,
+        "partScore": 10,
         "sortId": 1354258554255425538,
         "options": [
           {
@@ -140,39 +140,74 @@
             "optioni": "A",
             "id": 1410487622971224066,
             "optionPic": "",
-            "content": "GUANGZHOU"
+            "content": "黑色的光"
+          },
+          {
+            "result": 1,
+            "optioni": "B",
+            "id": 1410487622988001281,
+            "optionPic": "",
+            "content": "紫色的光"
+          },
+          {
+            "result": 2,
+            "optioni": "C",
+            "id": 1410487623004778497,
+            "optionPic": "",
+            "content": "灰色的光"
+          },
+          {
+            "result": 2,
+            "optioni": "D",
+            "id": 1410487623017361409,
+            "optionPic": "",
+            "content": "等于没有光"
+          }
+        ],
+        "titlePic": "",
+        "title": "舞台上黑光是什么颜色的光？",
+        "subjectId": 1410487622669234178,
+        "paperId": 1410487717867352065
+      },
+      {
+        "score": 20,
+        "titleType": 1,
+        "answerFlag": 1,
+        "sortName": "生命成长",
+        "partScore": 10,
+        "sortId": 1354258554255425538,
+        "options": [
+          {
+            "result": 1,
+            "optioni": "A",
+            "id": 1410487622971224066,
+            "optionPic": "",
+            "content": "熄光跑下场"
           },
           {
             "result": 2,
             "optioni": "B",
             "id": 1410487622988001281,
             "optionPic": "",
-            "content": "SHENZHEN"
+            "content": "鼓掌结束再下场"
           },
           {
-            "result": 1,
+            "result": 2,
             "optioni": "C",
             "id": 1410487623004778497,
             "optionPic": "",
-            "content": "XIANGGANG"
+            "content": "表演结束就下场"
           },
           {
-            "result": 1,
+            "result": 2,
             "optioni": "D",
             "id": 1410487623017361409,
             "optionPic": "",
-            "content": "AOMEN"
-          },
-          {
-            "result": 1,
-            "optioni": "E",
-            "id": 1410487623029944322,
-            "optionPic": "",
-            "content": "ZHUHAI"
+            "content": "什么情况都可以下场"
           }
         ],
         "titlePic": "",
-        "title": "港珠澳大桥连接的是我国的哪些城市呢？",
+        "title": "表演结束或中途退场应该如何下场？",
         "subjectId": 1410487622669234178,
         "paperId": 1410487717867352065
       }
@@ -180,7 +215,7 @@
     "answerCount": 0,
     "sortId": 1354258554255425538,
     "answerDuration": 5,
-    "name": "超级工程”走出的“深海钳工",
+    "name": "舞蹈测试题",
     "id": 1410487717867352065,
     "totalScore": 0
   }

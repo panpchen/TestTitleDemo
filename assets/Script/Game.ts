@@ -35,6 +35,8 @@ export default class Game extends cc.Component {
   titleBg: cc.Node = null;
   @property(cc.Node)
   circleBg: cc.Node = null;
+  @property(cc.Node)
+  titleBigBg: cc.Node = null;
   private _tip: cc.Node = null;
   private _isInitConfig: boolean = false; // 是否加载完题目配置
   private _subjectConfig = null; // 试卷配置
@@ -145,7 +147,6 @@ export default class Game extends cc.Component {
     cc.tween(this.titleBg)
       .to(0.25, { y: 550 }, { easing: "smooth" })
       .call(() => {
-        this.circleBg.active = this._titleCfg["titlePic"].length > 0;
         // 显示标题
         let titleType = "";
         if (this._titleCfg.titleType == 1) {
@@ -157,8 +158,29 @@ export default class Game extends cc.Component {
           this._titleCfg.title
         } ${titleType}`;
 
-        // 显示标题图片
-        if (this.circleBg.active) {
+        if (this._titleCfg["titlePic"].length > 0) {
+          // 显示标题图片
+          // this.circleBg.active = true;
+          // cc.resources.load(
+          //   `titlePics/${Utils.getPicName(this._titleCfg["titlePic"])}`,
+          //   cc.SpriteFrame,
+          //   (err, asset: cc.SpriteFrame) => {
+          //     if (err) {
+          //       cc.error(err);
+          //       return;
+          //     }
+          //     this.circleBg
+          //       .getChildByName("mask")
+          //       .getChildByName("sp")
+          //       .getComponent(cc.Sprite).spriteFrame = asset;
+          //   }
+          // );
+
+          this.titleBigBg.active = true;
+          this.titleBg.x = -130;
+          this.itemNoPicParent.node.x = -200;
+          this.titleBigBg.getComponent(cc.Sprite).spriteFrame = null;
+          // 加载大标题图
           cc.resources.load(
             `titlePics/${Utils.getPicName(this._titleCfg["titlePic"])}`,
             cc.SpriteFrame,
@@ -167,12 +189,12 @@ export default class Game extends cc.Component {
                 cc.error(err);
                 return;
               }
-              this.circleBg
-                .getChildByName("mask")
-                .getChildByName("sp")
-                .getComponent(cc.Sprite).spriteFrame = asset;
+              this.titleBigBg.getComponent(cc.Sprite).spriteFrame = asset;
             }
           );
+        } else {
+          this.titleBg.x = this.itemNoPicParent.node.x = 0;
+          this.titleBigBg.active = false;
         }
       })
       .to(0.5, { y: 260 }, { easing: "smooth" })
