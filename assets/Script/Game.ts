@@ -363,7 +363,7 @@ export default class Game extends cc.Component {
     // 算得分
     let awardScore = 0;
     if (
-      this._selectOptions.length == allAnswerList.length &&
+      // this._selectOptions.length == allAnswerList.length &&
       correctNum == allAnswerList.length
     ) {
       awardScore = this._titleCfg["score"];
